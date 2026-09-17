@@ -1,0 +1,12 @@
+FROM python:3.12.11-slim
+
+WORKDIR /app
+RUN pip install --no-cache-dir \
+    langgraph-api==0.13.2 \
+    'langgraph-cli[inmem]==0.4.31' \
+    langgraph==1.2.11 \
+    langchain==1.3.18 \
+    PyJWT==2.13.0
+COPY auth.py graph.py langgraph.json ./
+
+CMD ["langgraph", "dev", "--allow-blocking", "--no-browser", "--no-reload", "--host", "0.0.0.0", "--port", "8000", "--config", "langgraph.json"]

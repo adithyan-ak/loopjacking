@@ -1,0 +1,20 @@
+{
+  "claim": "The pinned May target derives the complete shell-wrapper argv representation and rejects a payload-only rawCommand; no command was executed.",
+  "contradicting_evidence": [
+    "GHSA-2j8v-hwgc-x698 lists an affected range through 2026.5.16 despite the available May tags containing the February fix."
+  ],
+  "limitations": [
+    "This is a source-native resolver check, not a second full gateway execution."
+  ],
+  "next_falsifying_experiment": "Produce an immutable stable 2026.5.16 artifact lacking the fix, if one exists.",
+  "oracle": {
+    "complete_b_derived": true,
+    "contains_fix_commit": true,
+    "executed": false,
+    "raw_a_rejected": true
+  },
+  "reproduction_command": "bash experiments/openclaw-approval-binding/capture_range.sh <worktree> <tsx> <output>",
+  "result": "fixed_path_present",
+  "target": "openclaw@2026.5.18",
+  "verified_at": "2026-09-10T07:38:21Z"
+}

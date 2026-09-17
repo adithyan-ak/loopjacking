@@ -1,0 +1,35 @@
+{
+  "checked_at": "2026-09-07",
+  "maximum": "0.13.4",
+  "minimum": "0.13.3",
+  "records": [
+    {
+      "command_extractor_present": true,
+      "command_extractor_sha256": "766cb4bda90767e08daa7e8ebf6594717b9072885346726db81e568c0fede228",
+      "command_forwarded_to_run": true,
+      "map_cmd_forwards_resume": true,
+      "map_cmd_forwards_update": true,
+      "map_cmd_present": true,
+      "map_cmd_sha256": "6586cc8c930cf5a5181461127f8a16aeb445fd1c3e307e798de92739f5f8e171",
+      "upload_time": "2026-09-01T21:36:10.408743Z",
+      "version": "0.13.3",
+      "wheel_filename": "langgraph_api-0.13.3-py3-none-any.whl",
+      "wheel_sha256": "328c01a94a2394245eb1afca6eac881db38a4b2352aaaf2f4481977daa56c163"
+    },
+    {
+      "command_extractor_present": true,
+      "command_extractor_sha256": "766cb4bda90767e08daa7e8ebf6594717b9072885346726db81e568c0fede228",
+      "command_forwarded_to_run": true,
+      "map_cmd_forwards_resume": true,
+      "map_cmd_forwards_update": true,
+      "map_cmd_present": true,
+      "map_cmd_sha256": "6586cc8c930cf5a5181461127f8a16aeb445fd1c3e307e798de92739f5f8e171",
+      "upload_time": "2026-09-04T22:53:25.039329Z",
+      "version": "0.13.4",
+      "wheel_filename": "langgraph_api-0.13.4-py3-none-any.whl",
+      "wheel_sha256": "b23e4c350235029d8f2eddc96f78991e93fd39c55f4a405f7fe664679ab62f19"
+    }
+  ],
+  "release_count": 2,
+  "source": "https://pypi.org/pypi/langgraph-api/json"
+}

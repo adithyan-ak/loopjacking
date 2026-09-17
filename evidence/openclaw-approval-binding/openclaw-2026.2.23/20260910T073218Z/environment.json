@@ -1,0 +1,7 @@
+{
+  "git_commit": "b817600533129771ace2801d7c05901c7f850fb8",
+  "git_tag": "v2026.2.23",
+  "node": "v24.4.1",
+  "platform": "Darwin local-host 24.6.0 Darwin Kernel Version 24.6.0: Mon Jul 14 11:30:40 PDT 2025; root:xnu-11417.140.69~1/RELEASE_ARM64_T6041 arm64",
+  "pnpm": "10.23.0"
+}

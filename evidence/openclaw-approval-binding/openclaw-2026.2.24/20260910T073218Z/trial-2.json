@@ -1,0 +1,117 @@
+{
+  "attack": {
+    "error": {
+      "code": "INVALID_REQUEST",
+      "details": {
+        "code": "RAW_COMMAND_MISMATCH",
+        "inferred": "/bin/sh -lc \"$0 \\\"$1\\\"\" /usr/bin/touch /var/folders/9v/_4lfr4mj2c77sj7g7zb94gzw0000gn/T/openclaw-loopjacking-nZgnaC/material-b.marker",
+        "rawCommand": "$0 \"$1\""
+      },
+      "message": "INVALID_REQUEST: rawCommand does not match command"
+    },
+    "markerCreated": false,
+    "reachedNode": false,
+    "rpcOk": false
+  },
+  "completeUnderlyingRequest": {
+    "canonicalOperationB": "/bin/sh -lc \"$0 \\\"$1\\\"\" /usr/bin/touch /var/folders/9v/_4lfr4mj2c77sj7g7zb94gzw0000gn/T/openclaw-loopjacking-nZgnaC/material-b.marker",
+    "command": [
+      "/bin/sh",
+      "-lc",
+      "$0 \"$1\"",
+      "/usr/bin/touch",
+      "/var/folders/9v/_4lfr4mj2c77sj7g7zb94gzw0000gn/T/openclaw-loopjacking-nZgnaC/material-b.marker"
+    ],
+    "preparedBeforeApproval": true,
+    "rawCommand": "$0 \"$1\""
+  },
+  "controls": {
+    "directB": {
+      "error": {
+        "code": "UNAVAILABLE",
+        "details": {
+          "nodeError": {
+            "code": "UNAVAILABLE",
+            "message": "SYSTEM_RUN_DENIED: approval required"
+          }
+        },
+        "message": "SYSTEM_RUN_DENIED: approval required"
+      },
+      "markerCreated": false,
+      "reachedNode": true,
+      "rpcOk": false
+    },
+    "unchangedA": {
+      "error": null,
+      "exactApprovalView": {
+        "createdAtMs": 1789026117532,
+        "expiresAtMs": 1789026147532,
+        "id": "5371f04e-94d5-4092-a2ed-6152653c07c3",
+        "request": {
+          "agentId": null,
+          "ask": null,
+          "command": "/usr/bin/printf UNCHANGED_A",
+          "cwd": null,
+          "host": "node",
+          "nodeId": "fb36174644aa1bf6802e82bbd88b8802bd07798d19bcc83a307a68f52f285b09",
+          "resolvedPath": null,
+          "security": null,
+          "sessionKey": null
+        }
+      },
+      "rpcOk": true
+    }
+  },
+  "exactApprovalView": {
+    "createdAtMs": 1789026117536,
+    "expiresAtMs": 1789026147536,
+    "id": "a66e0ac4-4c2a-4a12-bbc5-71a6cd7ac30f",
+    "request": {
+      "agentId": null,
+      "ask": null,
+      "command": "$0 \"$1\"",
+      "cwd": null,
+      "host": "node",
+      "nodeId": "fb36174644aa1bf6802e82bbd88b8802bd07798d19bcc83a307a68f52f285b09",
+      "resolvedPath": null,
+      "security": null,
+      "sessionKey": null
+    }
+  },
+  "executedArgv": [
+    [
+      "/usr/bin/printf",
+      "UNCHANGED_A"
+    ]
+  ],
+  "expectedAttack": false,
+  "humanDecision": {
+    "decision": "allow-once",
+    "forged": false,
+    "resolvedThrough": "exec.approval.resolve",
+    "understoodA": "$0 \"$1\""
+  },
+  "packageVersion": "2026.2.24",
+  "productDerivedApprovalTextWithoutRaw": {
+    "argv": [
+      "/bin/sh",
+      "-lc",
+      "$0 \"$1\"",
+      "/usr/bin/touch",
+      "/var/folders/9v/_4lfr4mj2c77sj7g7zb94gzw0000gn/T/openclaw-loopjacking-nZgnaC/material-b.marker"
+    ],
+    "cmdText": "/bin/sh -lc \"$0 \\\"$1\\\"\" /usr/bin/touch /var/folders/9v/_4lfr4mj2c77sj7g7zb94gzw0000gn/T/openclaw-loopjacking-nZgnaC/material-b.marker",
+    "ok": true,
+    "rawCommand": null,
+    "shellCommand": "$0 \"$1\""
+  },
+  "productResolutionWithRawA": {
+    "details": {
+      "code": "RAW_COMMAND_MISMATCH",
+      "inferred": "/bin/sh -lc \"$0 \\\"$1\\\"\" /usr/bin/touch /var/folders/9v/_4lfr4mj2c77sj7g7zb94gzw0000gn/T/openclaw-loopjacking-nZgnaC/material-b.marker",
+      "rawCommand": "$0 \"$1\""
+    },
+    "message": "INVALID_REQUEST: rawCommand does not match command",
+    "ok": false
+  }
+}

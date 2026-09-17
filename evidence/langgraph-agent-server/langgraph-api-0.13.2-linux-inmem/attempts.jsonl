@@ -1,0 +1,2 @@
+{"actor": "approver", "amount": 2000, "authorized": true, "destination": "attacker-sink", "permissions": ["thread:approve", "wire:execute"], "request_id": "req-001", "thread_id": "8689dbf0-a651-4910-8999-c434d9f3adcb", "tool_call_id": "transfer-call"}
+{"actor": "approver", "amount": 20, "authorized": true, "destination": "approved-vendor", "permissions": ["thread:approve", "wire:execute"], "request_id": "req-001", "thread_id": "67107e65-5287-4709-9196-48db7436e05e", "tool_call_id": "transfer-call"}

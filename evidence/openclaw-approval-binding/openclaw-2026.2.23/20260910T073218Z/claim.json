@@ -1,0 +1,20 @@
+{
+  "claim": "The released affected target consumed a genuine approval for displayed A to release materially different B through its native gateway and node-host path.",
+  "contradicting_evidence": [],
+  "limitations": [
+    "Loopback transport and a harmless temporary marker were used.",
+    "The distinct approval-role client was scripted after asserting the exact product event; human factors and GUI comprehension were not measured.",
+    "This experiment establishes only the pinned released target and the tested shell-wrapper argv path."
+  ],
+  "next_falsifying_experiment": "Rerun the same oracle on any disputed boundary or later release.",
+  "oracle": {
+    "direct_b_denied": true,
+    "expected_attack": true,
+    "trials": 3,
+    "unchanged_a_executes": true
+  },
+  "reproduction_command": "bash experiments/openclaw-approval-binding/capture_version.sh <pinned-openclaw-worktree> 1 <output-dir>",
+  "result": "strict_positive",
+  "target": "openclaw@2026.2.23",
+  "verified_at": "2026-09-10T07:41:36Z"
+}

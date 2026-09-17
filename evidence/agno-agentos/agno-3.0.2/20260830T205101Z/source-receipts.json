@@ -1,0 +1,22 @@
+{
+  "agent/_run.py": {
+    "sha256": "ab031a91df3ef592250a5ba4fdbf1f192b648fb83aafa60ba2f9667cbe75ad6a",
+    "size": 296612
+  },
+  "agent/_tools.py": {
+    "sha256": "3816cc01825268ddf751c61bad8d92a6f24273a4087d742f11da72bc522727f2",
+    "size": 53656
+  },
+  "os/auth.py": {
+    "sha256": "648da521f6ba81df71c23dce7a3960b0db6c8a60d43f8cccd81b5a127ff8f634",
+    "size": 25323
+  },
+  "os/routers/agents/router.py": {
+    "sha256": "fdea9b8dd21369629e427d83f886e63dcfc605eb1377959ba04193e5568b36a9",
+    "size": 111719
+  },
+  "os/routers/approvals/router.py": {
+    "sha256": "271f9725e0e2a776100a4dc33d64aaa272923f677858afc8687fb0cc6de4d5f0",
+    "size": 9683
+  }
+}

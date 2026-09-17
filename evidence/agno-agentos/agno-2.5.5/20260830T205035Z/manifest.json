@@ -1,0 +1,67 @@
+{
+  "dependencies": {
+    "PyJWT": "2.13.0",
+    "SQLAlchemy": "2.0.52",
+    "agno": "2.5.5",
+    "fastapi": "0.141.1",
+    "httpx": "0.28.1",
+    "python-multipart": "0.0.22",
+    "uvicorn": "0.52.4"
+  },
+  "experiment": "agno-agentos-approval-binding",
+  "external_effects": "none",
+  "finished_at": "2026-08-30T20:50:37.887517+00:00",
+  "platform": "macOS-15.6-arm64-arm-64bit",
+  "principals": {
+    "approver": {
+      "scopes": [
+        "agent_os:admin"
+      ],
+      "sub": "approval-admin"
+    },
+    "maker": {
+      "scopes": [
+        "agents:run"
+      ],
+      "sub": "maker-user"
+    },
+    "outsider": {
+      "scopes": [
+        "config:read"
+      ],
+      "sub": "outsider"
+    },
+    "wrong_user": {
+      "scopes": [
+        "agents:run"
+      ],
+      "sub": "different-maker"
+    }
+  },
+  "python": "3.12.11 (main, Aug 18 2025, 19:02:39) [Clang 20.1.4 ]",
+  "secrets": "Only a public test JWT key was used; bearer tokens are omitted from HTTP evidence.",
+  "started_at": "2026-08-30T20:50:35.497043+00:00",
+  "summary": {
+    "attack_observed": 5,
+    "attack_total": 5,
+    "completed_trials": 23,
+    "custom_safe_control_pass": true,
+    "direct_b_denied_pass": 0,
+    "direct_b_total": 3,
+    "honest_a_pass": 5,
+    "honest_a_total": 5,
+    "interpretation": "indeterminate_or_mixed",
+    "pending_rbac_pass": false,
+    "strict_trace_supported": false,
+    "total_trials": 23
+  },
+  "target": {
+    "package": "agno",
+    "version": "2.5.5"
+  },
+  "transport": {
+    "host": "127.0.0.1",
+    "port": 64117,
+    "scheme": "http"
+  }
+}

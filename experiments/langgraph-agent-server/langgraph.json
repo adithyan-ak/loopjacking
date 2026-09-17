@@ -1,0 +1,12 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "approval_agent": "./graph.py:graph"
+  },
+  "auth": {
+    "path": "./auth.py:auth"
+  },
+  "http": {
+    "disable_a2a": false
+  }
+}

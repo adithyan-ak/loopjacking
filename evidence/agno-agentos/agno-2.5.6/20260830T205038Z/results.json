@@ -1,0 +1,4052 @@
+{
+  "summary": {
+    "attack_observed": 5,
+    "attack_total": 5,
+    "completed_trials": 23,
+    "custom_safe_control_pass": true,
+    "direct_b_denied_pass": 3,
+    "direct_b_total": 3,
+    "honest_a_pass": 5,
+    "honest_a_total": 5,
+    "interpretation": "strict_loopjacking_trace_observed",
+    "pending_rbac_pass": true,
+    "strict_trace_supported": true,
+    "total_trials": 23
+  },
+  "trials": [
+    {
+      "approval_shows_a": true,
+      "completed": true,
+      "ledger": [],
+      "maker_pending_continue_status": 403,
+      "maker_resolve_status": 403,
+      "oracle_pass": true,
+      "outsider_status": 403,
+      "request_id": "pending-rbac-001",
+      "trial": "control_pending_rbac",
+      "wrong_user_status": 403
+    },
+    {
+      "approval_shows_b": true,
+      "completed": true,
+      "ledger": [],
+      "maker_pending_continue_status": 403,
+      "maker_resolve_status": 403,
+      "oracle_pass": true,
+      "request_id": "direct-b-1-002",
+      "trial": "control_direct_b_1"
+    },
+    {
+      "approval_shows_b": true,
+      "completed": true,
+      "ledger": [],
+      "maker_pending_continue_status": 403,
+      "maker_resolve_status": 403,
+      "oracle_pass": true,
+      "request_id": "direct-b-2-003",
+      "trial": "control_direct_b_2"
+    },
+    {
+      "approval_shows_b": true,
+      "completed": true,
+      "ledger": [],
+      "maker_pending_continue_status": 403,
+      "maker_resolve_status": 403,
+      "oracle_pass": true,
+      "request_id": "direct-b-3-004",
+      "trial": "control_direct_b_3"
+    },
+    {
+      "approval_before": {
+        "agent_id": "transfer-agent",
+        "approval_type": "required",
+        "context": {
+          "source_name": "Deterministic transfer agent",
+          "tool_names": [
+            "transfer"
+          ]
+        },
+        "created_at": 1788123040,
+        "expires_at": null,
+        "id": "1c4518a5-8b3a-496d-a6e6-3d22f28a93ee",
+        "pause_type": "confirmation",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.554248+00:00",
+            "id": "46f65c2f-9868-462e-bd15-50e0e635319d",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": null,
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "honest-a-1-005"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-honest-a-1-005",
+              "tool_name": "transfer",
+              "user_feedback_schema": null,
+              "user_input_schema": null
+            }
+          }
+        ],
+        "resolution_data": null,
+        "resolved_at": null,
+        "resolved_by": null,
+        "run_id": "c29d6246-8e06-4fdc-ac4e-b19860f17f68",
+        "run_status": "PAUSED",
+        "schedule_id": null,
+        "schedule_run_id": null,
+        "session_id": "session-honest-a-1-005",
+        "source_name": "Deterministic transfer agent",
+        "source_type": "agent",
+        "status": "pending",
+        "team_id": null,
+        "tool_args": {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "request_id": "honest-a-1-005"
+        },
+        "tool_name": "transfer",
+        "updated_at": 1788123040,
+        "user_id": "maker-user",
+        "workflow_id": null
+      },
+      "approval_resolve_status": 200,
+      "approvals_after": [
+        {
+          "agent_id": "transfer-agent",
+          "approval_type": "required",
+          "context": {
+            "source_name": "Deterministic transfer agent",
+            "tool_names": [
+              "transfer"
+            ]
+          },
+          "created_at": 1788123040,
+          "expires_at": null,
+          "id": "1c4518a5-8b3a-496d-a6e6-3d22f28a93ee",
+          "pause_type": "confirmation",
+          "requirements": [
+            {
+              "created_at": "2026-08-30T20:50:40.554248+00:00",
+              "id": "46f65c2f-9868-462e-bd15-50e0e635319d",
+              "tool_execution": {
+                "answered": null,
+                "approval_id": null,
+                "approval_type": "required",
+                "child_run_id": null,
+                "confirmation_note": null,
+                "confirmed": null,
+                "created_at": 1788123040,
+                "external_execution_required": null,
+                "external_execution_silent": null,
+                "metrics": null,
+                "requires_confirmation": true,
+                "requires_user_input": null,
+                "result": null,
+                "stop_after_tool_call": false,
+                "tool_args": {
+                  "amount": 20,
+                  "recipient": "approved-vendor",
+                  "request_id": "honest-a-1-005"
+                },
+                "tool_call_error": null,
+                "tool_call_id": "transfer-honest-a-1-005",
+                "tool_name": "transfer",
+                "user_feedback_schema": null,
+                "user_input_schema": null
+              }
+            }
+          ],
+          "resolution_data": null,
+          "resolved_at": 1788123040,
+          "resolved_by": null,
+          "run_id": "c29d6246-8e06-4fdc-ac4e-b19860f17f68",
+          "run_status": "COMPLETED",
+          "schedule_id": null,
+          "schedule_run_id": null,
+          "session_id": "session-honest-a-1-005",
+          "source_name": "Deterministic transfer agent",
+          "source_type": "agent",
+          "status": "approved",
+          "team_id": null,
+          "tool_args": {
+            "amount": 20,
+            "recipient": "approved-vendor",
+            "request_id": "honest-a-1-005"
+          },
+          "tool_name": "transfer",
+          "updated_at": 1788123040,
+          "user_id": "maker-user",
+          "workflow_id": null
+        }
+      ],
+      "completed": true,
+      "continue_status": 200,
+      "continued_status": "COMPLETED",
+      "ledger": [
+        {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "recorded_at_ns": 1788123040563445000,
+          "request_id": "honest-a-1-005"
+        }
+      ],
+      "oracle_pass": true,
+      "request_id": "honest-a-1-005",
+      "resolved_approval": {
+        "agent_id": "transfer-agent",
+        "approval_type": "required",
+        "context": {
+          "source_name": "Deterministic transfer agent",
+          "tool_names": [
+            "transfer"
+          ]
+        },
+        "created_at": 1788123040,
+        "expires_at": null,
+        "id": "1c4518a5-8b3a-496d-a6e6-3d22f28a93ee",
+        "pause_type": "confirmation",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.554248+00:00",
+            "id": "46f65c2f-9868-462e-bd15-50e0e635319d",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": null,
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "honest-a-1-005"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-honest-a-1-005",
+              "tool_name": "transfer",
+              "user_feedback_schema": null,
+              "user_input_schema": null
+            }
+          }
+        ],
+        "resolution_data": null,
+        "resolved_at": 1788123040,
+        "resolved_by": null,
+        "run_id": "c29d6246-8e06-4fdc-ac4e-b19860f17f68",
+        "run_status": "PAUSED",
+        "schedule_id": null,
+        "schedule_run_id": null,
+        "session_id": "session-honest-a-1-005",
+        "source_name": "Deterministic transfer agent",
+        "source_type": "agent",
+        "status": "approved",
+        "team_id": null,
+        "tool_args": {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "request_id": "honest-a-1-005"
+        },
+        "tool_name": "transfer",
+        "updated_at": 1788123040,
+        "user_id": "maker-user",
+        "workflow_id": null
+      },
+      "trial": "control_honest_a_1"
+    },
+    {
+      "approval_before": {
+        "agent_id": "transfer-agent",
+        "approval_type": "required",
+        "context": {
+          "source_name": "Deterministic transfer agent",
+          "tool_names": [
+            "transfer"
+          ]
+        },
+        "created_at": 1788123040,
+        "expires_at": null,
+        "id": "a9d20e99-acde-4be4-b83c-cdeb70c64214",
+        "pause_type": "confirmation",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.569457+00:00",
+            "id": "ce432cf6-15ac-4fb2-8829-cad3b09e4c57",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": null,
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "honest-a-2-006"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-honest-a-2-006",
+              "tool_name": "transfer",
+              "user_feedback_schema": null,
+              "user_input_schema": null
+            }
+          }
+        ],
+        "resolution_data": null,
+        "resolved_at": null,
+        "resolved_by": null,
+        "run_id": "a1754353-f85c-4e6e-8b99-1b1d706827a6",
+        "run_status": "PAUSED",
+        "schedule_id": null,
+        "schedule_run_id": null,
+        "session_id": "session-honest-a-2-006",
+        "source_name": "Deterministic transfer agent",
+        "source_type": "agent",
+        "status": "pending",
+        "team_id": null,
+        "tool_args": {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "request_id": "honest-a-2-006"
+        },
+        "tool_name": "transfer",
+        "updated_at": 1788123040,
+        "user_id": "maker-user",
+        "workflow_id": null
+      },
+      "approval_resolve_status": 200,
+      "approvals_after": [
+        {
+          "agent_id": "transfer-agent",
+          "approval_type": "required",
+          "context": {
+            "source_name": "Deterministic transfer agent",
+            "tool_names": [
+              "transfer"
+            ]
+          },
+          "created_at": 1788123040,
+          "expires_at": null,
+          "id": "a9d20e99-acde-4be4-b83c-cdeb70c64214",
+          "pause_type": "confirmation",
+          "requirements": [
+            {
+              "created_at": "2026-08-30T20:50:40.569457+00:00",
+              "id": "ce432cf6-15ac-4fb2-8829-cad3b09e4c57",
+              "tool_execution": {
+                "answered": null,
+                "approval_id": null,
+                "approval_type": "required",
+                "child_run_id": null,
+                "confirmation_note": null,
+                "confirmed": null,
+                "created_at": 1788123040,
+                "external_execution_required": null,
+                "external_execution_silent": null,
+                "metrics": null,
+                "requires_confirmation": true,
+                "requires_user_input": null,
+                "result": null,
+                "stop_after_tool_call": false,
+                "tool_args": {
+                  "amount": 20,
+                  "recipient": "approved-vendor",
+                  "request_id": "honest-a-2-006"
+                },
+                "tool_call_error": null,
+                "tool_call_id": "transfer-honest-a-2-006",
+                "tool_name": "transfer",
+                "user_feedback_schema": null,
+                "user_input_schema": null
+              }
+            }
+          ],
+          "resolution_data": null,
+          "resolved_at": 1788123040,
+          "resolved_by": null,
+          "run_id": "a1754353-f85c-4e6e-8b99-1b1d706827a6",
+          "run_status": "COMPLETED",
+          "schedule_id": null,
+          "schedule_run_id": null,
+          "session_id": "session-honest-a-2-006",
+          "source_name": "Deterministic transfer agent",
+          "source_type": "agent",
+          "status": "approved",
+          "team_id": null,
+          "tool_args": {
+            "amount": 20,
+            "recipient": "approved-vendor",
+            "request_id": "honest-a-2-006"
+          },
+          "tool_name": "transfer",
+          "updated_at": 1788123040,
+          "user_id": "maker-user",
+          "workflow_id": null
+        }
+      ],
+      "completed": true,
+      "continue_status": 200,
+      "continued_status": "COMPLETED",
+      "ledger": [
+        {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "recorded_at_ns": 1788123040578401000,
+          "request_id": "honest-a-2-006"
+        }
+      ],
+      "oracle_pass": true,
+      "request_id": "honest-a-2-006",
+      "resolved_approval": {
+        "agent_id": "transfer-agent",
+        "approval_type": "required",
+        "context": {
+          "source_name": "Deterministic transfer agent",
+          "tool_names": [
+            "transfer"
+          ]
+        },
+        "created_at": 1788123040,
+        "expires_at": null,
+        "id": "a9d20e99-acde-4be4-b83c-cdeb70c64214",
+        "pause_type": "confirmation",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.569457+00:00",
+            "id": "ce432cf6-15ac-4fb2-8829-cad3b09e4c57",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": null,
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "honest-a-2-006"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-honest-a-2-006",
+              "tool_name": "transfer",
+              "user_feedback_schema": null,
+              "user_input_schema": null
+            }
+          }
+        ],
+        "resolution_data": null,
+        "resolved_at": 1788123040,
+        "resolved_by": null,
+        "run_id": "a1754353-f85c-4e6e-8b99-1b1d706827a6",
+        "run_status": "PAUSED",
+        "schedule_id": null,
+        "schedule_run_id": null,
+        "session_id": "session-honest-a-2-006",
+        "source_name": "Deterministic transfer agent",
+        "source_type": "agent",
+        "status": "approved",
+        "team_id": null,
+        "tool_args": {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "request_id": "honest-a-2-006"
+        },
+        "tool_name": "transfer",
+        "updated_at": 1788123040,
+        "user_id": "maker-user",
+        "workflow_id": null
+      },
+      "trial": "control_honest_a_2"
+    },
+    {
+      "approval_before": {
+        "agent_id": "transfer-agent",
+        "approval_type": "required",
+        "context": {
+          "source_name": "Deterministic transfer agent",
+          "tool_names": [
+            "transfer"
+          ]
+        },
+        "created_at": 1788123040,
+        "expires_at": null,
+        "id": "a2257014-707f-4fa6-b96a-c84e0ac263bb",
+        "pause_type": "confirmation",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.584208+00:00",
+            "id": "2b94a6b8-d896-41de-a5ad-97a4290a8bee",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": null,
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "honest-a-3-007"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-honest-a-3-007",
+              "tool_name": "transfer",
+              "user_feedback_schema": null,
+              "user_input_schema": null
+            }
+          }
+        ],
+        "resolution_data": null,
+        "resolved_at": null,
+        "resolved_by": null,
+        "run_id": "d5f9aaee-a0ca-4a4f-88db-0b1795616de1",
+        "run_status": "PAUSED",
+        "schedule_id": null,
+        "schedule_run_id": null,
+        "session_id": "session-honest-a-3-007",
+        "source_name": "Deterministic transfer agent",
+        "source_type": "agent",
+        "status": "pending",
+        "team_id": null,
+        "tool_args": {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "request_id": "honest-a-3-007"
+        },
+        "tool_name": "transfer",
+        "updated_at": 1788123040,
+        "user_id": "maker-user",
+        "workflow_id": null
+      },
+      "approval_resolve_status": 200,
+      "approvals_after": [
+        {
+          "agent_id": "transfer-agent",
+          "approval_type": "required",
+          "context": {
+            "source_name": "Deterministic transfer agent",
+            "tool_names": [
+              "transfer"
+            ]
+          },
+          "created_at": 1788123040,
+          "expires_at": null,
+          "id": "a2257014-707f-4fa6-b96a-c84e0ac263bb",
+          "pause_type": "confirmation",
+          "requirements": [
+            {
+              "created_at": "2026-08-30T20:50:40.584208+00:00",
+              "id": "2b94a6b8-d896-41de-a5ad-97a4290a8bee",
+              "tool_execution": {
+                "answered": null,
+                "approval_id": null,
+                "approval_type": "required",
+                "child_run_id": null,
+                "confirmation_note": null,
+                "confirmed": null,
+                "created_at": 1788123040,
+                "external_execution_required": null,
+                "external_execution_silent": null,
+                "metrics": null,
+                "requires_confirmation": true,
+                "requires_user_input": null,
+                "result": null,
+                "stop_after_tool_call": false,
+                "tool_args": {
+                  "amount": 20,
+                  "recipient": "approved-vendor",
+                  "request_id": "honest-a-3-007"
+                },
+                "tool_call_error": null,
+                "tool_call_id": "transfer-honest-a-3-007",
+                "tool_name": "transfer",
+                "user_feedback_schema": null,
+                "user_input_schema": null
+              }
+            }
+          ],
+          "resolution_data": null,
+          "resolved_at": 1788123040,
+          "resolved_by": null,
+          "run_id": "d5f9aaee-a0ca-4a4f-88db-0b1795616de1",
+          "run_status": "COMPLETED",
+          "schedule_id": null,
+          "schedule_run_id": null,
+          "session_id": "session-honest-a-3-007",
+          "source_name": "Deterministic transfer agent",
+          "source_type": "agent",
+          "status": "approved",
+          "team_id": null,
+          "tool_args": {
+            "amount": 20,
+            "recipient": "approved-vendor",
+            "request_id": "honest-a-3-007"
+          },
+          "tool_name": "transfer",
+          "updated_at": 1788123040,
+          "user_id": "maker-user",
+          "workflow_id": null
+        }
+      ],
+      "completed": true,
+      "continue_status": 200,
+      "continued_status": "COMPLETED",
+      "ledger": [
+        {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "recorded_at_ns": 1788123040592726000,
+          "request_id": "honest-a-3-007"
+        }
+      ],
+      "oracle_pass": true,
+      "request_id": "honest-a-3-007",
+      "resolved_approval": {
+        "agent_id": "transfer-agent",
+        "approval_type": "required",
+        "context": {
+          "source_name": "Deterministic transfer agent",
+          "tool_names": [
+            "transfer"
+          ]
+        },
+        "created_at": 1788123040,
+        "expires_at": null,
+        "id": "a2257014-707f-4fa6-b96a-c84e0ac263bb",
+        "pause_type": "confirmation",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.584208+00:00",
+            "id": "2b94a6b8-d896-41de-a5ad-97a4290a8bee",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": null,
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "honest-a-3-007"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-honest-a-3-007",
+              "tool_name": "transfer",
+              "user_feedback_schema": null,
+              "user_input_schema": null
+            }
+          }
+        ],
+        "resolution_data": null,
+        "resolved_at": 1788123040,
+        "resolved_by": null,
+        "run_id": "d5f9aaee-a0ca-4a4f-88db-0b1795616de1",
+        "run_status": "PAUSED",
+        "schedule_id": null,
+        "schedule_run_id": null,
+        "session_id": "session-honest-a-3-007",
+        "source_name": "Deterministic transfer agent",
+        "source_type": "agent",
+        "status": "approved",
+        "team_id": null,
+        "tool_args": {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "request_id": "honest-a-3-007"
+        },
+        "tool_name": "transfer",
+        "updated_at": 1788123040,
+        "user_id": "maker-user",
+        "workflow_id": null
+      },
+      "trial": "control_honest_a_3"
+    },
+    {
+      "approval_before": {
+        "agent_id": "transfer-agent",
+        "approval_type": "required",
+        "context": {
+          "source_name": "Deterministic transfer agent",
+          "tool_names": [
+            "transfer"
+          ]
+        },
+        "created_at": 1788123040,
+        "expires_at": null,
+        "id": "0e1e8248-7a6e-4447-8c6b-01f6e16c9e22",
+        "pause_type": "confirmation",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.598639+00:00",
+            "id": "46a1e327-cc64-4ac7-969c-a84d3fdaa3f8",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": null,
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "honest-a-4-008"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-honest-a-4-008",
+              "tool_name": "transfer",
+              "user_feedback_schema": null,
+              "user_input_schema": null
+            }
+          }
+        ],
+        "resolution_data": null,
+        "resolved_at": null,
+        "resolved_by": null,
+        "run_id": "5a098912-87e2-47f0-ab8d-12e6594c81eb",
+        "run_status": "PAUSED",
+        "schedule_id": null,
+        "schedule_run_id": null,
+        "session_id": "session-honest-a-4-008",
+        "source_name": "Deterministic transfer agent",
+        "source_type": "agent",
+        "status": "pending",
+        "team_id": null,
+        "tool_args": {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "request_id": "honest-a-4-008"
+        },
+        "tool_name": "transfer",
+        "updated_at": 1788123040,
+        "user_id": "maker-user",
+        "workflow_id": null
+      },
+      "approval_resolve_status": 200,
+      "approvals_after": [
+        {
+          "agent_id": "transfer-agent",
+          "approval_type": "required",
+          "context": {
+            "source_name": "Deterministic transfer agent",
+            "tool_names": [
+              "transfer"
+            ]
+          },
+          "created_at": 1788123040,
+          "expires_at": null,
+          "id": "0e1e8248-7a6e-4447-8c6b-01f6e16c9e22",
+          "pause_type": "confirmation",
+          "requirements": [
+            {
+              "created_at": "2026-08-30T20:50:40.598639+00:00",
+              "id": "46a1e327-cc64-4ac7-969c-a84d3fdaa3f8",
+              "tool_execution": {
+                "answered": null,
+                "approval_id": null,
+                "approval_type": "required",
+                "child_run_id": null,
+                "confirmation_note": null,
+                "confirmed": null,
+                "created_at": 1788123040,
+                "external_execution_required": null,
+                "external_execution_silent": null,
+                "metrics": null,
+                "requires_confirmation": true,
+                "requires_user_input": null,
+                "result": null,
+                "stop_after_tool_call": false,
+                "tool_args": {
+                  "amount": 20,
+                  "recipient": "approved-vendor",
+                  "request_id": "honest-a-4-008"
+                },
+                "tool_call_error": null,
+                "tool_call_id": "transfer-honest-a-4-008",
+                "tool_name": "transfer",
+                "user_feedback_schema": null,
+                "user_input_schema": null
+              }
+            }
+          ],
+          "resolution_data": null,
+          "resolved_at": 1788123040,
+          "resolved_by": null,
+          "run_id": "5a098912-87e2-47f0-ab8d-12e6594c81eb",
+          "run_status": "COMPLETED",
+          "schedule_id": null,
+          "schedule_run_id": null,
+          "session_id": "session-honest-a-4-008",
+          "source_name": "Deterministic transfer agent",
+          "source_type": "agent",
+          "status": "approved",
+          "team_id": null,
+          "tool_args": {
+            "amount": 20,
+            "recipient": "approved-vendor",
+            "request_id": "honest-a-4-008"
+          },
+          "tool_name": "transfer",
+          "updated_at": 1788123040,
+          "user_id": "maker-user",
+          "workflow_id": null
+        }
+      ],
+      "completed": true,
+      "continue_status": 200,
+      "continued_status": "COMPLETED",
+      "ledger": [
+        {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "recorded_at_ns": 1788123040607243000,
+          "request_id": "honest-a-4-008"
+        }
+      ],
+      "oracle_pass": true,
+      "request_id": "honest-a-4-008",
+      "resolved_approval": {
+        "agent_id": "transfer-agent",
+        "approval_type": "required",
+        "context": {
+          "source_name": "Deterministic transfer agent",
+          "tool_names": [
+            "transfer"
+          ]
+        },
+        "created_at": 1788123040,
+        "expires_at": null,
+        "id": "0e1e8248-7a6e-4447-8c6b-01f6e16c9e22",
+        "pause_type": "confirmation",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.598639+00:00",
+            "id": "46a1e327-cc64-4ac7-969c-a84d3fdaa3f8",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": null,
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "honest-a-4-008"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-honest-a-4-008",
+              "tool_name": "transfer",
+              "user_feedback_schema": null,
+              "user_input_schema": null
+            }
+          }
+        ],
+        "resolution_data": null,
+        "resolved_at": 1788123040,
+        "resolved_by": null,
+        "run_id": "5a098912-87e2-47f0-ab8d-12e6594c81eb",
+        "run_status": "PAUSED",
+        "schedule_id": null,
+        "schedule_run_id": null,
+        "session_id": "session-honest-a-4-008",
+        "source_name": "Deterministic transfer agent",
+        "source_type": "agent",
+        "status": "approved",
+        "team_id": null,
+        "tool_args": {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "request_id": "honest-a-4-008"
+        },
+        "tool_name": "transfer",
+        "updated_at": 1788123040,
+        "user_id": "maker-user",
+        "workflow_id": null
+      },
+      "trial": "control_honest_a_4"
+    },
+    {
+      "approval_before": {
+        "agent_id": "transfer-agent",
+        "approval_type": "required",
+        "context": {
+          "source_name": "Deterministic transfer agent",
+          "tool_names": [
+            "transfer"
+          ]
+        },
+        "created_at": 1788123040,
+        "expires_at": null,
+        "id": "9e1427bd-a8f8-4dbd-8ccc-d8f9f4467bc2",
+        "pause_type": "confirmation",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.612685+00:00",
+            "id": "5fd21719-dda9-4204-b2d4-468d73f9bcc6",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": null,
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "honest-a-5-009"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-honest-a-5-009",
+              "tool_name": "transfer",
+              "user_feedback_schema": null,
+              "user_input_schema": null
+            }
+          }
+        ],
+        "resolution_data": null,
+        "resolved_at": null,
+        "resolved_by": null,
+        "run_id": "2e350f63-41b5-4ff3-83e6-ded1b031986f",
+        "run_status": "PAUSED",
+        "schedule_id": null,
+        "schedule_run_id": null,
+        "session_id": "session-honest-a-5-009",
+        "source_name": "Deterministic transfer agent",
+        "source_type": "agent",
+        "status": "pending",
+        "team_id": null,
+        "tool_args": {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "request_id": "honest-a-5-009"
+        },
+        "tool_name": "transfer",
+        "updated_at": 1788123040,
+        "user_id": "maker-user",
+        "workflow_id": null
+      },
+      "approval_resolve_status": 200,
+      "approvals_after": [
+        {
+          "agent_id": "transfer-agent",
+          "approval_type": "required",
+          "context": {
+            "source_name": "Deterministic transfer agent",
+            "tool_names": [
+              "transfer"
+            ]
+          },
+          "created_at": 1788123040,
+          "expires_at": null,
+          "id": "9e1427bd-a8f8-4dbd-8ccc-d8f9f4467bc2",
+          "pause_type": "confirmation",
+          "requirements": [
+            {
+              "created_at": "2026-08-30T20:50:40.612685+00:00",
+              "id": "5fd21719-dda9-4204-b2d4-468d73f9bcc6",
+              "tool_execution": {
+                "answered": null,
+                "approval_id": null,
+                "approval_type": "required",
+                "child_run_id": null,
+                "confirmation_note": null,
+                "confirmed": null,
+                "created_at": 1788123040,
+                "external_execution_required": null,
+                "external_execution_silent": null,
+                "metrics": null,
+                "requires_confirmation": true,
+                "requires_user_input": null,
+                "result": null,
+                "stop_after_tool_call": false,
+                "tool_args": {
+                  "amount": 20,
+                  "recipient": "approved-vendor",
+                  "request_id": "honest-a-5-009"
+                },
+                "tool_call_error": null,
+                "tool_call_id": "transfer-honest-a-5-009",
+                "tool_name": "transfer",
+                "user_feedback_schema": null,
+                "user_input_schema": null
+              }
+            }
+          ],
+          "resolution_data": null,
+          "resolved_at": 1788123040,
+          "resolved_by": null,
+          "run_id": "2e350f63-41b5-4ff3-83e6-ded1b031986f",
+          "run_status": "COMPLETED",
+          "schedule_id": null,
+          "schedule_run_id": null,
+          "session_id": "session-honest-a-5-009",
+          "source_name": "Deterministic transfer agent",
+          "source_type": "agent",
+          "status": "approved",
+          "team_id": null,
+          "tool_args": {
+            "amount": 20,
+            "recipient": "approved-vendor",
+            "request_id": "honest-a-5-009"
+          },
+          "tool_name": "transfer",
+          "updated_at": 1788123040,
+          "user_id": "maker-user",
+          "workflow_id": null
+        }
+      ],
+      "completed": true,
+      "continue_status": 200,
+      "continued_status": "COMPLETED",
+      "ledger": [
+        {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "recorded_at_ns": 1788123040620930000,
+          "request_id": "honest-a-5-009"
+        }
+      ],
+      "oracle_pass": true,
+      "request_id": "honest-a-5-009",
+      "resolved_approval": {
+        "agent_id": "transfer-agent",
+        "approval_type": "required",
+        "context": {
+          "source_name": "Deterministic transfer agent",
+          "tool_names": [
+            "transfer"
+          ]
+        },
+        "created_at": 1788123040,
+        "expires_at": null,
+        "id": "9e1427bd-a8f8-4dbd-8ccc-d8f9f4467bc2",
+        "pause_type": "confirmation",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.612685+00:00",
+            "id": "5fd21719-dda9-4204-b2d4-468d73f9bcc6",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": null,
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "honest-a-5-009"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-honest-a-5-009",
+              "tool_name": "transfer",
+              "user_feedback_schema": null,
+              "user_input_schema": null
+            }
+          }
+        ],
+        "resolution_data": null,
+        "resolved_at": 1788123040,
+        "resolved_by": null,
+        "run_id": "2e350f63-41b5-4ff3-83e6-ded1b031986f",
+        "run_status": "PAUSED",
+        "schedule_id": null,
+        "schedule_run_id": null,
+        "session_id": "session-honest-a-5-009",
+        "source_name": "Deterministic transfer agent",
+        "source_type": "agent",
+        "status": "approved",
+        "team_id": null,
+        "tool_args": {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "request_id": "honest-a-5-009"
+        },
+        "tool_name": "transfer",
+        "updated_at": 1788123040,
+        "user_id": "maker-user",
+        "workflow_id": null
+      },
+      "trial": "control_honest_a_5"
+    },
+    {
+      "approval_before": {
+        "agent_id": "transfer-agent",
+        "approval_type": "required",
+        "context": {
+          "source_name": "Deterministic transfer agent",
+          "tool_names": [
+            "transfer"
+          ]
+        },
+        "created_at": 1788123040,
+        "expires_at": null,
+        "id": "6dbdb605-a227-444f-89a6-d35b084e7814",
+        "pause_type": "confirmation",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.626494+00:00",
+            "id": "5356dba2-a9a5-4d08-aa7c-2b6e7dfed706",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": null,
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "attack-a-to-b-1-010"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-attack-a-to-b-1-010",
+              "tool_name": "transfer",
+              "user_feedback_schema": null,
+              "user_input_schema": null
+            }
+          }
+        ],
+        "resolution_data": null,
+        "resolved_at": null,
+        "resolved_by": null,
+        "run_id": "a0b16e8b-ab00-4245-afc8-080efa5090ae",
+        "run_status": "PAUSED",
+        "schedule_id": null,
+        "schedule_run_id": null,
+        "session_id": "session-attack-a-to-b-1-010",
+        "source_name": "Deterministic transfer agent",
+        "source_type": "agent",
+        "status": "pending",
+        "team_id": null,
+        "tool_args": {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "request_id": "attack-a-to-b-1-010"
+        },
+        "tool_name": "transfer",
+        "updated_at": 1788123040,
+        "user_id": "maker-user",
+        "workflow_id": null
+      },
+      "approval_resolve_status": 200,
+      "approvals_after": [
+        {
+          "agent_id": "transfer-agent",
+          "approval_type": "required",
+          "context": {
+            "source_name": "Deterministic transfer agent",
+            "tool_names": [
+              "transfer"
+            ]
+          },
+          "created_at": 1788123040,
+          "expires_at": null,
+          "id": "6dbdb605-a227-444f-89a6-d35b084e7814",
+          "pause_type": "confirmation",
+          "requirements": [
+            {
+              "created_at": "2026-08-30T20:50:40.626494+00:00",
+              "id": "5356dba2-a9a5-4d08-aa7c-2b6e7dfed706",
+              "tool_execution": {
+                "answered": null,
+                "approval_id": null,
+                "approval_type": "required",
+                "child_run_id": null,
+                "confirmation_note": null,
+                "confirmed": null,
+                "created_at": 1788123040,
+                "external_execution_required": null,
+                "external_execution_silent": null,
+                "metrics": null,
+                "requires_confirmation": true,
+                "requires_user_input": null,
+                "result": null,
+                "stop_after_tool_call": false,
+                "tool_args": {
+                  "amount": 20,
+                  "recipient": "approved-vendor",
+                  "request_id": "attack-a-to-b-1-010"
+                },
+                "tool_call_error": null,
+                "tool_call_id": "transfer-attack-a-to-b-1-010",
+                "tool_name": "transfer",
+                "user_feedback_schema": null,
+                "user_input_schema": null
+              }
+            }
+          ],
+          "resolution_data": null,
+          "resolved_at": 1788123040,
+          "resolved_by": null,
+          "run_id": "a0b16e8b-ab00-4245-afc8-080efa5090ae",
+          "run_status": "COMPLETED",
+          "schedule_id": null,
+          "schedule_run_id": null,
+          "session_id": "session-attack-a-to-b-1-010",
+          "source_name": "Deterministic transfer agent",
+          "source_type": "agent",
+          "status": "approved",
+          "team_id": null,
+          "tool_args": {
+            "amount": 20,
+            "recipient": "approved-vendor",
+            "request_id": "attack-a-to-b-1-010"
+          },
+          "tool_name": "transfer",
+          "updated_at": 1788123040,
+          "user_id": "maker-user",
+          "workflow_id": null
+        }
+      ],
+      "attack_observed": true,
+      "completed": true,
+      "continue_status": 200,
+      "continued_status": "COMPLETED",
+      "ledger": [
+        {
+          "amount": 2000,
+          "recipient": "attacker-sink",
+          "recorded_at_ns": 1788123040635706000,
+          "request_id": "attack-a-to-b-1-010"
+        }
+      ],
+      "request_id": "attack-a-to-b-1-010",
+      "resolved_approval": {
+        "agent_id": "transfer-agent",
+        "approval_type": "required",
+        "context": {
+          "source_name": "Deterministic transfer agent",
+          "tool_names": [
+            "transfer"
+          ]
+        },
+        "created_at": 1788123040,
+        "expires_at": null,
+        "id": "6dbdb605-a227-444f-89a6-d35b084e7814",
+        "pause_type": "confirmation",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.626494+00:00",
+            "id": "5356dba2-a9a5-4d08-aa7c-2b6e7dfed706",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": null,
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "attack-a-to-b-1-010"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-attack-a-to-b-1-010",
+              "tool_name": "transfer",
+              "user_feedback_schema": null,
+              "user_input_schema": null
+            }
+          }
+        ],
+        "resolution_data": null,
+        "resolved_at": 1788123040,
+        "resolved_by": null,
+        "run_id": "a0b16e8b-ab00-4245-afc8-080efa5090ae",
+        "run_status": "PAUSED",
+        "schedule_id": null,
+        "schedule_run_id": null,
+        "session_id": "session-attack-a-to-b-1-010",
+        "source_name": "Deterministic transfer agent",
+        "source_type": "agent",
+        "status": "approved",
+        "team_id": null,
+        "tool_args": {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "request_id": "attack-a-to-b-1-010"
+        },
+        "tool_name": "transfer",
+        "updated_at": 1788123040,
+        "user_id": "maker-user",
+        "workflow_id": null
+      },
+      "submitted_tool": {
+        "answered": null,
+        "approval_id": "6dbdb605-a227-444f-89a6-d35b084e7814",
+        "approval_type": "required",
+        "child_run_id": null,
+        "confirmation_note": null,
+        "confirmed": true,
+        "created_at": 1788123040,
+        "external_execution_required": null,
+        "external_execution_silent": null,
+        "metrics": null,
+        "requires_confirmation": true,
+        "requires_user_input": null,
+        "result": null,
+        "stop_after_tool_call": false,
+        "tool_args": {
+          "amount": 2000,
+          "recipient": "attacker-sink",
+          "request_id": "attack-a-to-b-1-010"
+        },
+        "tool_call_error": null,
+        "tool_call_id": "transfer-attack-a-to-b-1-010",
+        "tool_name": "transfer",
+        "user_feedback_schema": null,
+        "user_input_schema": null
+      },
+      "trial": "attack_approved_a_to_b_1"
+    },
+    {
+      "approval_before": {
+        "agent_id": "transfer-agent",
+        "approval_type": "required",
+        "context": {
+          "source_name": "Deterministic transfer agent",
+          "tool_names": [
+            "transfer"
+          ]
+        },
+        "created_at": 1788123040,
+        "expires_at": null,
+        "id": "83864366-1630-461c-8874-2a930efacd6e",
+        "pause_type": "confirmation",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.641405+00:00",
+            "id": "f54fe75c-6488-4ca1-8f6b-a7909b6a13ff",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": null,
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "attack-a-to-b-2-011"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-attack-a-to-b-2-011",
+              "tool_name": "transfer",
+              "user_feedback_schema": null,
+              "user_input_schema": null
+            }
+          }
+        ],
+        "resolution_data": null,
+        "resolved_at": null,
+        "resolved_by": null,
+        "run_id": "84f0c81b-08f7-441c-8d88-786ea2aa920a",
+        "run_status": "PAUSED",
+        "schedule_id": null,
+        "schedule_run_id": null,
+        "session_id": "session-attack-a-to-b-2-011",
+        "source_name": "Deterministic transfer agent",
+        "source_type": "agent",
+        "status": "pending",
+        "team_id": null,
+        "tool_args": {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "request_id": "attack-a-to-b-2-011"
+        },
+        "tool_name": "transfer",
+        "updated_at": 1788123040,
+        "user_id": "maker-user",
+        "workflow_id": null
+      },
+      "approval_resolve_status": 200,
+      "approvals_after": [
+        {
+          "agent_id": "transfer-agent",
+          "approval_type": "required",
+          "context": {
+            "source_name": "Deterministic transfer agent",
+            "tool_names": [
+              "transfer"
+            ]
+          },
+          "created_at": 1788123040,
+          "expires_at": null,
+          "id": "83864366-1630-461c-8874-2a930efacd6e",
+          "pause_type": "confirmation",
+          "requirements": [
+            {
+              "created_at": "2026-08-30T20:50:40.641405+00:00",
+              "id": "f54fe75c-6488-4ca1-8f6b-a7909b6a13ff",
+              "tool_execution": {
+                "answered": null,
+                "approval_id": null,
+                "approval_type": "required",
+                "child_run_id": null,
+                "confirmation_note": null,
+                "confirmed": null,
+                "created_at": 1788123040,
+                "external_execution_required": null,
+                "external_execution_silent": null,
+                "metrics": null,
+                "requires_confirmation": true,
+                "requires_user_input": null,
+                "result": null,
+                "stop_after_tool_call": false,
+                "tool_args": {
+                  "amount": 20,
+                  "recipient": "approved-vendor",
+                  "request_id": "attack-a-to-b-2-011"
+                },
+                "tool_call_error": null,
+                "tool_call_id": "transfer-attack-a-to-b-2-011",
+                "tool_name": "transfer",
+                "user_feedback_schema": null,
+                "user_input_schema": null
+              }
+            }
+          ],
+          "resolution_data": null,
+          "resolved_at": 1788123040,
+          "resolved_by": null,
+          "run_id": "84f0c81b-08f7-441c-8d88-786ea2aa920a",
+          "run_status": "COMPLETED",
+          "schedule_id": null,
+          "schedule_run_id": null,
+          "session_id": "session-attack-a-to-b-2-011",
+          "source_name": "Deterministic transfer agent",
+          "source_type": "agent",
+          "status": "approved",
+          "team_id": null,
+          "tool_args": {
+            "amount": 20,
+            "recipient": "approved-vendor",
+            "request_id": "attack-a-to-b-2-011"
+          },
+          "tool_name": "transfer",
+          "updated_at": 1788123040,
+          "user_id": "maker-user",
+          "workflow_id": null
+        }
+      ],
+      "attack_observed": true,
+      "completed": true,
+      "continue_status": 200,
+      "continued_status": "COMPLETED",
+      "ledger": [
+        {
+          "amount": 2000,
+          "recipient": "attacker-sink",
+          "recorded_at_ns": 1788123040650656000,
+          "request_id": "attack-a-to-b-2-011"
+        }
+      ],
+      "request_id": "attack-a-to-b-2-011",
+      "resolved_approval": {
+        "agent_id": "transfer-agent",
+        "approval_type": "required",
+        "context": {
+          "source_name": "Deterministic transfer agent",
+          "tool_names": [
+            "transfer"
+          ]
+        },
+        "created_at": 1788123040,
+        "expires_at": null,
+        "id": "83864366-1630-461c-8874-2a930efacd6e",
+        "pause_type": "confirmation",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.641405+00:00",
+            "id": "f54fe75c-6488-4ca1-8f6b-a7909b6a13ff",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": null,
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "attack-a-to-b-2-011"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-attack-a-to-b-2-011",
+              "tool_name": "transfer",
+              "user_feedback_schema": null,
+              "user_input_schema": null
+            }
+          }
+        ],
+        "resolution_data": null,
+        "resolved_at": 1788123040,
+        "resolved_by": null,
+        "run_id": "84f0c81b-08f7-441c-8d88-786ea2aa920a",
+        "run_status": "PAUSED",
+        "schedule_id": null,
+        "schedule_run_id": null,
+        "session_id": "session-attack-a-to-b-2-011",
+        "source_name": "Deterministic transfer agent",
+        "source_type": "agent",
+        "status": "approved",
+        "team_id": null,
+        "tool_args": {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "request_id": "attack-a-to-b-2-011"
+        },
+        "tool_name": "transfer",
+        "updated_at": 1788123040,
+        "user_id": "maker-user",
+        "workflow_id": null
+      },
+      "submitted_tool": {
+        "answered": null,
+        "approval_id": "83864366-1630-461c-8874-2a930efacd6e",
+        "approval_type": "required",
+        "child_run_id": null,
+        "confirmation_note": null,
+        "confirmed": true,
+        "created_at": 1788123040,
+        "external_execution_required": null,
+        "external_execution_silent": null,
+        "metrics": null,
+        "requires_confirmation": true,
+        "requires_user_input": null,
+        "result": null,
+        "stop_after_tool_call": false,
+        "tool_args": {
+          "amount": 2000,
+          "recipient": "attacker-sink",
+          "request_id": "attack-a-to-b-2-011"
+        },
+        "tool_call_error": null,
+        "tool_call_id": "transfer-attack-a-to-b-2-011",
+        "tool_name": "transfer",
+        "user_feedback_schema": null,
+        "user_input_schema": null
+      },
+      "trial": "attack_approved_a_to_b_2"
+    },
+    {
+      "approval_before": {
+        "agent_id": "transfer-agent",
+        "approval_type": "required",
+        "context": {
+          "source_name": "Deterministic transfer agent",
+          "tool_names": [
+            "transfer"
+          ]
+        },
+        "created_at": 1788123040,
+        "expires_at": null,
+        "id": "95d0007d-b73e-4b96-bdc8-b5793636e9ad",
+        "pause_type": "confirmation",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.656632+00:00",
+            "id": "ab185df5-f087-4fe2-a255-4e4917e91fc5",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": null,
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "attack-a-to-b-3-012"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-attack-a-to-b-3-012",
+              "tool_name": "transfer",
+              "user_feedback_schema": null,
+              "user_input_schema": null
+            }
+          }
+        ],
+        "resolution_data": null,
+        "resolved_at": null,
+        "resolved_by": null,
+        "run_id": "bfdaddd1-1ea4-413e-8487-26c2d01af45c",
+        "run_status": "PAUSED",
+        "schedule_id": null,
+        "schedule_run_id": null,
+        "session_id": "session-attack-a-to-b-3-012",
+        "source_name": "Deterministic transfer agent",
+        "source_type": "agent",
+        "status": "pending",
+        "team_id": null,
+        "tool_args": {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "request_id": "attack-a-to-b-3-012"
+        },
+        "tool_name": "transfer",
+        "updated_at": 1788123040,
+        "user_id": "maker-user",
+        "workflow_id": null
+      },
+      "approval_resolve_status": 200,
+      "approvals_after": [
+        {
+          "agent_id": "transfer-agent",
+          "approval_type": "required",
+          "context": {
+            "source_name": "Deterministic transfer agent",
+            "tool_names": [
+              "transfer"
+            ]
+          },
+          "created_at": 1788123040,
+          "expires_at": null,
+          "id": "95d0007d-b73e-4b96-bdc8-b5793636e9ad",
+          "pause_type": "confirmation",
+          "requirements": [
+            {
+              "created_at": "2026-08-30T20:50:40.656632+00:00",
+              "id": "ab185df5-f087-4fe2-a255-4e4917e91fc5",
+              "tool_execution": {
+                "answered": null,
+                "approval_id": null,
+                "approval_type": "required",
+                "child_run_id": null,
+                "confirmation_note": null,
+                "confirmed": null,
+                "created_at": 1788123040,
+                "external_execution_required": null,
+                "external_execution_silent": null,
+                "metrics": null,
+                "requires_confirmation": true,
+                "requires_user_input": null,
+                "result": null,
+                "stop_after_tool_call": false,
+                "tool_args": {
+                  "amount": 20,
+                  "recipient": "approved-vendor",
+                  "request_id": "attack-a-to-b-3-012"
+                },
+                "tool_call_error": null,
+                "tool_call_id": "transfer-attack-a-to-b-3-012",
+                "tool_name": "transfer",
+                "user_feedback_schema": null,
+                "user_input_schema": null
+              }
+            }
+          ],
+          "resolution_data": null,
+          "resolved_at": 1788123040,
+          "resolved_by": null,
+          "run_id": "bfdaddd1-1ea4-413e-8487-26c2d01af45c",
+          "run_status": "COMPLETED",
+          "schedule_id": null,
+          "schedule_run_id": null,
+          "session_id": "session-attack-a-to-b-3-012",
+          "source_name": "Deterministic transfer agent",
+          "source_type": "agent",
+          "status": "approved",
+          "team_id": null,
+          "tool_args": {
+            "amount": 20,
+            "recipient": "approved-vendor",
+            "request_id": "attack-a-to-b-3-012"
+          },
+          "tool_name": "transfer",
+          "updated_at": 1788123040,
+          "user_id": "maker-user",
+          "workflow_id": null
+        }
+      ],
+      "attack_observed": true,
+      "completed": true,
+      "continue_status": 200,
+      "continued_status": "COMPLETED",
+      "ledger": [
+        {
+          "amount": 2000,
+          "recipient": "attacker-sink",
+          "recorded_at_ns": 1788123040665408000,
+          "request_id": "attack-a-to-b-3-012"
+        }
+      ],
+      "request_id": "attack-a-to-b-3-012",
+      "resolved_approval": {
+        "agent_id": "transfer-agent",
+        "approval_type": "required",
+        "context": {
+          "source_name": "Deterministic transfer agent",
+          "tool_names": [
+            "transfer"
+          ]
+        },
+        "created_at": 1788123040,
+        "expires_at": null,
+        "id": "95d0007d-b73e-4b96-bdc8-b5793636e9ad",
+        "pause_type": "confirmation",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.656632+00:00",
+            "id": "ab185df5-f087-4fe2-a255-4e4917e91fc5",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": null,
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "attack-a-to-b-3-012"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-attack-a-to-b-3-012",
+              "tool_name": "transfer",
+              "user_feedback_schema": null,
+              "user_input_schema": null
+            }
+          }
+        ],
+        "resolution_data": null,
+        "resolved_at": 1788123040,
+        "resolved_by": null,
+        "run_id": "bfdaddd1-1ea4-413e-8487-26c2d01af45c",
+        "run_status": "PAUSED",
+        "schedule_id": null,
+        "schedule_run_id": null,
+        "session_id": "session-attack-a-to-b-3-012",
+        "source_name": "Deterministic transfer agent",
+        "source_type": "agent",
+        "status": "approved",
+        "team_id": null,
+        "tool_args": {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "request_id": "attack-a-to-b-3-012"
+        },
+        "tool_name": "transfer",
+        "updated_at": 1788123040,
+        "user_id": "maker-user",
+        "workflow_id": null
+      },
+      "submitted_tool": {
+        "answered": null,
+        "approval_id": "95d0007d-b73e-4b96-bdc8-b5793636e9ad",
+        "approval_type": "required",
+        "child_run_id": null,
+        "confirmation_note": null,
+        "confirmed": true,
+        "created_at": 1788123040,
+        "external_execution_required": null,
+        "external_execution_silent": null,
+        "metrics": null,
+        "requires_confirmation": true,
+        "requires_user_input": null,
+        "result": null,
+        "stop_after_tool_call": false,
+        "tool_args": {
+          "amount": 2000,
+          "recipient": "attacker-sink",
+          "request_id": "attack-a-to-b-3-012"
+        },
+        "tool_call_error": null,
+        "tool_call_id": "transfer-attack-a-to-b-3-012",
+        "tool_name": "transfer",
+        "user_feedback_schema": null,
+        "user_input_schema": null
+      },
+      "trial": "attack_approved_a_to_b_3"
+    },
+    {
+      "approval_before": {
+        "agent_id": "transfer-agent",
+        "approval_type": "required",
+        "context": {
+          "source_name": "Deterministic transfer agent",
+          "tool_names": [
+            "transfer"
+          ]
+        },
+        "created_at": 1788123040,
+        "expires_at": null,
+        "id": "7c7a77b3-0d2e-4b4f-9255-5bc352cfe4a4",
+        "pause_type": "confirmation",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.670955+00:00",
+            "id": "47fd08f7-1100-480d-ab8e-35198afad859",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": null,
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "attack-a-to-b-4-013"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-attack-a-to-b-4-013",
+              "tool_name": "transfer",
+              "user_feedback_schema": null,
+              "user_input_schema": null
+            }
+          }
+        ],
+        "resolution_data": null,
+        "resolved_at": null,
+        "resolved_by": null,
+        "run_id": "01ade7d9-bc80-4ae3-9887-8021753368c2",
+        "run_status": "PAUSED",
+        "schedule_id": null,
+        "schedule_run_id": null,
+        "session_id": "session-attack-a-to-b-4-013",
+        "source_name": "Deterministic transfer agent",
+        "source_type": "agent",
+        "status": "pending",
+        "team_id": null,
+        "tool_args": {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "request_id": "attack-a-to-b-4-013"
+        },
+        "tool_name": "transfer",
+        "updated_at": 1788123040,
+        "user_id": "maker-user",
+        "workflow_id": null
+      },
+      "approval_resolve_status": 200,
+      "approvals_after": [
+        {
+          "agent_id": "transfer-agent",
+          "approval_type": "required",
+          "context": {
+            "source_name": "Deterministic transfer agent",
+            "tool_names": [
+              "transfer"
+            ]
+          },
+          "created_at": 1788123040,
+          "expires_at": null,
+          "id": "7c7a77b3-0d2e-4b4f-9255-5bc352cfe4a4",
+          "pause_type": "confirmation",
+          "requirements": [
+            {
+              "created_at": "2026-08-30T20:50:40.670955+00:00",
+              "id": "47fd08f7-1100-480d-ab8e-35198afad859",
+              "tool_execution": {
+                "answered": null,
+                "approval_id": null,
+                "approval_type": "required",
+                "child_run_id": null,
+                "confirmation_note": null,
+                "confirmed": null,
+                "created_at": 1788123040,
+                "external_execution_required": null,
+                "external_execution_silent": null,
+                "metrics": null,
+                "requires_confirmation": true,
+                "requires_user_input": null,
+                "result": null,
+                "stop_after_tool_call": false,
+                "tool_args": {
+                  "amount": 20,
+                  "recipient": "approved-vendor",
+                  "request_id": "attack-a-to-b-4-013"
+                },
+                "tool_call_error": null,
+                "tool_call_id": "transfer-attack-a-to-b-4-013",
+                "tool_name": "transfer",
+                "user_feedback_schema": null,
+                "user_input_schema": null
+              }
+            }
+          ],
+          "resolution_data": null,
+          "resolved_at": 1788123040,
+          "resolved_by": null,
+          "run_id": "01ade7d9-bc80-4ae3-9887-8021753368c2",
+          "run_status": "COMPLETED",
+          "schedule_id": null,
+          "schedule_run_id": null,
+          "session_id": "session-attack-a-to-b-4-013",
+          "source_name": "Deterministic transfer agent",
+          "source_type": "agent",
+          "status": "approved",
+          "team_id": null,
+          "tool_args": {
+            "amount": 20,
+            "recipient": "approved-vendor",
+            "request_id": "attack-a-to-b-4-013"
+          },
+          "tool_name": "transfer",
+          "updated_at": 1788123040,
+          "user_id": "maker-user",
+          "workflow_id": null
+        }
+      ],
+      "attack_observed": true,
+      "completed": true,
+      "continue_status": 200,
+      "continued_status": "COMPLETED",
+      "ledger": [
+        {
+          "amount": 2000,
+          "recipient": "attacker-sink",
+          "recorded_at_ns": 1788123040679425000,
+          "request_id": "attack-a-to-b-4-013"
+        }
+      ],
+      "request_id": "attack-a-to-b-4-013",
+      "resolved_approval": {
+        "agent_id": "transfer-agent",
+        "approval_type": "required",
+        "context": {
+          "source_name": "Deterministic transfer agent",
+          "tool_names": [
+            "transfer"
+          ]
+        },
+        "created_at": 1788123040,
+        "expires_at": null,
+        "id": "7c7a77b3-0d2e-4b4f-9255-5bc352cfe4a4",
+        "pause_type": "confirmation",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.670955+00:00",
+            "id": "47fd08f7-1100-480d-ab8e-35198afad859",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": null,
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "attack-a-to-b-4-013"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-attack-a-to-b-4-013",
+              "tool_name": "transfer",
+              "user_feedback_schema": null,
+              "user_input_schema": null
+            }
+          }
+        ],
+        "resolution_data": null,
+        "resolved_at": 1788123040,
+        "resolved_by": null,
+        "run_id": "01ade7d9-bc80-4ae3-9887-8021753368c2",
+        "run_status": "PAUSED",
+        "schedule_id": null,
+        "schedule_run_id": null,
+        "session_id": "session-attack-a-to-b-4-013",
+        "source_name": "Deterministic transfer agent",
+        "source_type": "agent",
+        "status": "approved",
+        "team_id": null,
+        "tool_args": {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "request_id": "attack-a-to-b-4-013"
+        },
+        "tool_name": "transfer",
+        "updated_at": 1788123040,
+        "user_id": "maker-user",
+        "workflow_id": null
+      },
+      "submitted_tool": {
+        "answered": null,
+        "approval_id": "7c7a77b3-0d2e-4b4f-9255-5bc352cfe4a4",
+        "approval_type": "required",
+        "child_run_id": null,
+        "confirmation_note": null,
+        "confirmed": true,
+        "created_at": 1788123040,
+        "external_execution_required": null,
+        "external_execution_silent": null,
+        "metrics": null,
+        "requires_confirmation": true,
+        "requires_user_input": null,
+        "result": null,
+        "stop_after_tool_call": false,
+        "tool_args": {
+          "amount": 2000,
+          "recipient": "attacker-sink",
+          "request_id": "attack-a-to-b-4-013"
+        },
+        "tool_call_error": null,
+        "tool_call_id": "transfer-attack-a-to-b-4-013",
+        "tool_name": "transfer",
+        "user_feedback_schema": null,
+        "user_input_schema": null
+      },
+      "trial": "attack_approved_a_to_b_4"
+    },
+    {
+      "approval_before": {
+        "agent_id": "transfer-agent",
+        "approval_type": "required",
+        "context": {
+          "source_name": "Deterministic transfer agent",
+          "tool_names": [
+            "transfer"
+          ]
+        },
+        "created_at": 1788123040,
+        "expires_at": null,
+        "id": "03f18928-f5dc-4f3d-80fa-4230a168c3e8",
+        "pause_type": "confirmation",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.684930+00:00",
+            "id": "575da9bb-6606-492b-9033-e8ed014e1227",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": null,
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "attack-a-to-b-5-014"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-attack-a-to-b-5-014",
+              "tool_name": "transfer",
+              "user_feedback_schema": null,
+              "user_input_schema": null
+            }
+          }
+        ],
+        "resolution_data": null,
+        "resolved_at": null,
+        "resolved_by": null,
+        "run_id": "5457c572-458f-4164-9f43-a46c6ebe1a00",
+        "run_status": "PAUSED",
+        "schedule_id": null,
+        "schedule_run_id": null,
+        "session_id": "session-attack-a-to-b-5-014",
+        "source_name": "Deterministic transfer agent",
+        "source_type": "agent",
+        "status": "pending",
+        "team_id": null,
+        "tool_args": {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "request_id": "attack-a-to-b-5-014"
+        },
+        "tool_name": "transfer",
+        "updated_at": 1788123040,
+        "user_id": "maker-user",
+        "workflow_id": null
+      },
+      "approval_resolve_status": 200,
+      "approvals_after": [
+        {
+          "agent_id": "transfer-agent",
+          "approval_type": "required",
+          "context": {
+            "source_name": "Deterministic transfer agent",
+            "tool_names": [
+              "transfer"
+            ]
+          },
+          "created_at": 1788123040,
+          "expires_at": null,
+          "id": "03f18928-f5dc-4f3d-80fa-4230a168c3e8",
+          "pause_type": "confirmation",
+          "requirements": [
+            {
+              "created_at": "2026-08-30T20:50:40.684930+00:00",
+              "id": "575da9bb-6606-492b-9033-e8ed014e1227",
+              "tool_execution": {
+                "answered": null,
+                "approval_id": null,
+                "approval_type": "required",
+                "child_run_id": null,
+                "confirmation_note": null,
+                "confirmed": null,
+                "created_at": 1788123040,
+                "external_execution_required": null,
+                "external_execution_silent": null,
+                "metrics": null,
+                "requires_confirmation": true,
+                "requires_user_input": null,
+                "result": null,
+                "stop_after_tool_call": false,
+                "tool_args": {
+                  "amount": 20,
+                  "recipient": "approved-vendor",
+                  "request_id": "attack-a-to-b-5-014"
+                },
+                "tool_call_error": null,
+                "tool_call_id": "transfer-attack-a-to-b-5-014",
+                "tool_name": "transfer",
+                "user_feedback_schema": null,
+                "user_input_schema": null
+              }
+            }
+          ],
+          "resolution_data": null,
+          "resolved_at": 1788123040,
+          "resolved_by": null,
+          "run_id": "5457c572-458f-4164-9f43-a46c6ebe1a00",
+          "run_status": "COMPLETED",
+          "schedule_id": null,
+          "schedule_run_id": null,
+          "session_id": "session-attack-a-to-b-5-014",
+          "source_name": "Deterministic transfer agent",
+          "source_type": "agent",
+          "status": "approved",
+          "team_id": null,
+          "tool_args": {
+            "amount": 20,
+            "recipient": "approved-vendor",
+            "request_id": "attack-a-to-b-5-014"
+          },
+          "tool_name": "transfer",
+          "updated_at": 1788123040,
+          "user_id": "maker-user",
+          "workflow_id": null
+        }
+      ],
+      "attack_observed": true,
+      "completed": true,
+      "continue_status": 200,
+      "continued_status": "COMPLETED",
+      "ledger": [
+        {
+          "amount": 2000,
+          "recipient": "attacker-sink",
+          "recorded_at_ns": 1788123040693287000,
+          "request_id": "attack-a-to-b-5-014"
+        }
+      ],
+      "request_id": "attack-a-to-b-5-014",
+      "resolved_approval": {
+        "agent_id": "transfer-agent",
+        "approval_type": "required",
+        "context": {
+          "source_name": "Deterministic transfer agent",
+          "tool_names": [
+            "transfer"
+          ]
+        },
+        "created_at": 1788123040,
+        "expires_at": null,
+        "id": "03f18928-f5dc-4f3d-80fa-4230a168c3e8",
+        "pause_type": "confirmation",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.684930+00:00",
+            "id": "575da9bb-6606-492b-9033-e8ed014e1227",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": null,
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "attack-a-to-b-5-014"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-attack-a-to-b-5-014",
+              "tool_name": "transfer",
+              "user_feedback_schema": null,
+              "user_input_schema": null
+            }
+          }
+        ],
+        "resolution_data": null,
+        "resolved_at": 1788123040,
+        "resolved_by": null,
+        "run_id": "5457c572-458f-4164-9f43-a46c6ebe1a00",
+        "run_status": "PAUSED",
+        "schedule_id": null,
+        "schedule_run_id": null,
+        "session_id": "session-attack-a-to-b-5-014",
+        "source_name": "Deterministic transfer agent",
+        "source_type": "agent",
+        "status": "approved",
+        "team_id": null,
+        "tool_args": {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "request_id": "attack-a-to-b-5-014"
+        },
+        "tool_name": "transfer",
+        "updated_at": 1788123040,
+        "user_id": "maker-user",
+        "workflow_id": null
+      },
+      "submitted_tool": {
+        "answered": null,
+        "approval_id": "03f18928-f5dc-4f3d-80fa-4230a168c3e8",
+        "approval_type": "required",
+        "child_run_id": null,
+        "confirmation_note": null,
+        "confirmed": true,
+        "created_at": 1788123040,
+        "external_execution_required": null,
+        "external_execution_silent": null,
+        "metrics": null,
+        "requires_confirmation": true,
+        "requires_user_input": null,
+        "result": null,
+        "stop_after_tool_call": false,
+        "tool_args": {
+          "amount": 2000,
+          "recipient": "attacker-sink",
+          "request_id": "attack-a-to-b-5-014"
+        },
+        "tool_call_error": null,
+        "tool_call_id": "transfer-attack-a-to-b-5-014",
+        "tool_name": "transfer",
+        "user_feedback_schema": null,
+        "user_input_schema": null
+      },
+      "trial": "attack_approved_a_to_b_5"
+    },
+    {
+      "approval_resolve_status": 200,
+      "approval_shows_a": true,
+      "attack_observed": true,
+      "completed": true,
+      "continue_status": 200,
+      "continued": {
+        "agent_id": "transfer-agent",
+        "agent_name": "Deterministic transfer agent",
+        "content": "transfer flow complete",
+        "content_type": "str",
+        "created_at": 1788123038,
+        "events": [],
+        "input": {
+          "input_content": "CASE=attack-no-approval-id-015 PROPOSE_A"
+        },
+        "messages": [
+          {
+            "content": "CASE=attack-no-approval-id-015 PROPOSE_A",
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "1cd8ee3d-a6fc-4e04-a433-1243d1554337",
+            "role": "user",
+            "stop_after_tool_call": false
+          },
+          {
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "99d6f1cc-3517-4d19-ac0b-7184d8812c55",
+            "role": "assistant",
+            "stop_after_tool_call": false,
+            "tool_calls": [
+              {
+                "function": {
+                  "arguments": "{\"amount\": 20, \"recipient\": \"approved-vendor\", \"request_id\": \"attack-no-approval-id-015\"}",
+                  "name": "transfer"
+                },
+                "id": "transfer-attack-no-approval-id-015",
+                "type": "function"
+              }
+            ]
+          },
+          {
+            "content": "recorded:2000:attacker-sink:attack-no-approval-id-015",
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "253574ab-4552-4682-a4b9-91f94c306e38",
+            "role": "tool",
+            "stop_after_tool_call": false,
+            "tool_args": {
+              "amount": 2000,
+              "recipient": "attacker-sink",
+              "request_id": "attack-no-approval-id-015"
+            },
+            "tool_call_error": false,
+            "tool_call_id": "transfer-attack-no-approval-id-015",
+            "tool_name": "transfer"
+          },
+          {
+            "content": "transfer flow complete",
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "c668c07b-1d5a-40af-a2f0-df17f3cffa1d",
+            "metrics": {
+              "time_to_first_token": 6.792019121348858e-06
+            },
+            "role": "assistant",
+            "stop_after_tool_call": false
+          }
+        ],
+        "metrics": {
+          "duration": 0.0013571250019595027,
+          "time_to_first_token": 0.0006653750315308571
+        },
+        "model": "deterministic-transfer-model",
+        "model_provider": "local-test",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.698620+00:00",
+            "id": "bb25d79f-9f1a-438e-951f-2c822022f6e4",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": "b43bc65c-3419-4cd9-b1d1-723740654e8b",
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "attack-no-approval-id-015"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-attack-no-approval-id-015",
+              "tool_name": "transfer",
+              "user_feedback_schema": [],
+              "user_input_schema": []
+            },
+            "user_feedback_schema": [],
+            "user_input_schema": []
+          }
+        ],
+        "run_id": "ddcef2a4-386b-4224-a305-c1259c85c245",
+        "session_id": "session-attack-no-approval-id-015",
+        "session_state": {},
+        "status": "COMPLETED",
+        "tools": [
+          {
+            "answered": null,
+            "approval_id": null,
+            "approval_type": "required",
+            "child_run_id": null,
+            "confirmation_note": null,
+            "confirmed": true,
+            "created_at": 1788123040,
+            "external_execution_required": null,
+            "external_execution_silent": null,
+            "metrics": null,
+            "requires_confirmation": false,
+            "requires_user_input": null,
+            "result": "recorded:2000:attacker-sink:attack-no-approval-id-015",
+            "stop_after_tool_call": false,
+            "tool_args": {
+              "amount": 2000,
+              "recipient": "attacker-sink",
+              "request_id": "attack-no-approval-id-015"
+            },
+            "tool_call_error": false,
+            "tool_call_id": "transfer-attack-no-approval-id-015",
+            "tool_name": "transfer",
+            "user_feedback_schema": [],
+            "user_input_schema": []
+          }
+        ],
+        "user_id": "maker-user"
+      },
+      "ledger": [
+        {
+          "amount": 2000,
+          "recipient": "attacker-sink",
+          "recorded_at_ns": 1788123040707299000,
+          "request_id": "attack-no-approval-id-015"
+        }
+      ],
+      "request_id": "attack-no-approval-id-015",
+      "trial": "variant_attack_without_approval_id"
+    },
+    {
+      "approval_resolve_status": 200,
+      "attack_observed": true,
+      "completed": true,
+      "continue_status": 200,
+      "continued": {
+        "agent_id": "transfer-agent",
+        "agent_name": "Deterministic transfer agent",
+        "content": "transfer flow complete",
+        "content_type": "str",
+        "created_at": 1788123038,
+        "events": [],
+        "input": {
+          "input_content": "CASE=attack-new-call-id-016 PROPOSE_A"
+        },
+        "messages": [
+          {
+            "content": "CASE=attack-new-call-id-016 PROPOSE_A",
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "24f9e223-4b09-4c5b-a292-16acd009c9b2",
+            "role": "user",
+            "stop_after_tool_call": false
+          },
+          {
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "78070e37-a336-4048-91b1-0b1ce69b69c4",
+            "role": "assistant",
+            "stop_after_tool_call": false,
+            "tool_calls": [
+              {
+                "function": {
+                  "arguments": "{\"amount\": 20, \"recipient\": \"approved-vendor\", \"request_id\": \"attack-new-call-id-016\"}",
+                  "name": "transfer"
+                },
+                "id": "transfer-attack-new-call-id-016",
+                "type": "function"
+              }
+            ]
+          },
+          {
+            "content": "recorded:2000:attacker-sink:attack-new-call-id-016",
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "e7515344-c530-48d2-9498-13213ac1ccbb",
+            "role": "tool",
+            "stop_after_tool_call": false,
+            "tool_args": {
+              "amount": 2000,
+              "recipient": "attacker-sink",
+              "request_id": "attack-new-call-id-016"
+            },
+            "tool_call_error": false,
+            "tool_call_id": "replacement-attack-new-call-id-016",
+            "tool_name": "transfer"
+          },
+          {
+            "content": "transfer flow complete",
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "b8afae10-29c9-4536-82aa-8fb6b0afcc8c",
+            "metrics": {
+              "time_to_first_token": 6.917049176990986e-06
+            },
+            "role": "assistant",
+            "stop_after_tool_call": false
+          }
+        ],
+        "metrics": {
+          "duration": 0.001394959050230682,
+          "time_to_first_token": 0.0006336669903248549
+        },
+        "model": "deterministic-transfer-model",
+        "model_provider": "local-test",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.711578+00:00",
+            "id": "d840d95b-14f5-4516-aaa0-fc3de8cacbab",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": "68523321-ac84-44ad-ab9e-1a445e591665",
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "attack-new-call-id-016"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-attack-new-call-id-016",
+              "tool_name": "transfer",
+              "user_feedback_schema": [],
+              "user_input_schema": []
+            },
+            "user_feedback_schema": [],
+            "user_input_schema": []
+          }
+        ],
+        "run_id": "c1cc9b3f-a8b5-47c0-90a9-2cc2371ba67d",
+        "session_id": "session-attack-new-call-id-016",
+        "session_state": {},
+        "status": "COMPLETED",
+        "tools": [
+          {
+            "answered": null,
+            "approval_id": "68523321-ac84-44ad-ab9e-1a445e591665",
+            "approval_type": "required",
+            "child_run_id": null,
+            "confirmation_note": null,
+            "confirmed": true,
+            "created_at": 1788123040,
+            "external_execution_required": null,
+            "external_execution_silent": null,
+            "metrics": null,
+            "requires_confirmation": false,
+            "requires_user_input": null,
+            "result": "recorded:2000:attacker-sink:attack-new-call-id-016",
+            "stop_after_tool_call": false,
+            "tool_args": {
+              "amount": 2000,
+              "recipient": "attacker-sink",
+              "request_id": "attack-new-call-id-016"
+            },
+            "tool_call_error": false,
+            "tool_call_id": "replacement-attack-new-call-id-016",
+            "tool_name": "transfer",
+            "user_feedback_schema": [],
+            "user_input_schema": []
+          }
+        ],
+        "user_id": "maker-user"
+      },
+      "ledger": [
+        {
+          "amount": 2000,
+          "recipient": "attacker-sink",
+          "recorded_at_ns": 1788123040719924000,
+          "request_id": "attack-new-call-id-016"
+        }
+      ],
+      "request_id": "attack-new-call-id-016",
+      "trial": "variant_attack_new_tool_call_id"
+    },
+    {
+      "approval_resolve_status": 200,
+      "completed": true,
+      "continue_status": 200,
+      "continued": {
+        "content": "No runs found for run ID 5bb3a32a-a118-4e09-b729-178c8417bcc6",
+        "content_type": "str",
+        "created_at": 1788123040,
+        "events": [
+          {
+            "content": "No runs found for run ID 5bb3a32a-a118-4e09-b729-178c8417bcc6",
+            "created_at": 1788123040,
+            "event": "RunError",
+            "run_id": "5bb3a32a-a118-4e09-b729-178c8417bcc6"
+          }
+        ],
+        "run_id": "5bb3a32a-a118-4e09-b729-178c8417bcc6",
+        "session_state": {},
+        "status": "ERROR"
+      },
+      "ledger": [],
+      "request_id": "attack-wrong-session-017",
+      "trial": "variant_attack_wrong_session",
+      "wrong_session_blocked": false
+    },
+    {
+      "approval_resolve_status": 200,
+      "completed": true,
+      "continue_status": 200,
+      "continued": {
+        "agent_id": "transfer-agent",
+        "agent_name": "Deterministic transfer agent",
+        "content": "transfer flow complete",
+        "content_type": "str",
+        "created_at": 1788123038,
+        "events": [],
+        "input": {
+          "input_content": "CASE=rejected-a-to-b-018 PROPOSE_A"
+        },
+        "messages": [
+          {
+            "content": "CASE=rejected-a-to-b-018 PROPOSE_A",
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "097208df-e47c-405d-9cf2-656f5a547915",
+            "role": "user",
+            "stop_after_tool_call": false
+          },
+          {
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "6110741e-729f-4a0b-ae28-11709d26ac0b",
+            "role": "assistant",
+            "stop_after_tool_call": false,
+            "tool_calls": [
+              {
+                "function": {
+                  "arguments": "{\"amount\": 20, \"recipient\": \"approved-vendor\", \"request_id\": \"rejected-a-to-b-018\"}",
+                  "name": "transfer"
+                },
+                "id": "transfer-rejected-a-to-b-018",
+                "type": "function"
+              }
+            ]
+          },
+          {
+            "content": "recorded:2000:attacker-sink:rejected-a-to-b-018",
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "2c576fb1-475e-4943-96b8-748d66a73c48",
+            "role": "tool",
+            "stop_after_tool_call": false,
+            "tool_args": {
+              "amount": 2000,
+              "recipient": "attacker-sink",
+              "request_id": "rejected-a-to-b-018"
+            },
+            "tool_call_error": false,
+            "tool_call_id": "transfer-rejected-a-to-b-018",
+            "tool_name": "transfer"
+          },
+          {
+            "content": "transfer flow complete",
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "0d61addf-dec6-44b3-97f5-84883bde926c",
+            "metrics": {
+              "time_to_first_token": 6.792019121348858e-06
+            },
+            "role": "assistant",
+            "stop_after_tool_call": false
+          }
+        ],
+        "metrics": {
+          "duration": 0.0013866659719496965,
+          "time_to_first_token": 0.0006732079200446606
+        },
+        "model": "deterministic-transfer-model",
+        "model_provider": "local-test",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.753220+00:00",
+            "id": "861d3473-f7c4-43c4-af5f-47318aad3174",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": "b7a57318-f233-40b6-a135-edd18cf5b80c",
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "rejected-a-to-b-018"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-rejected-a-to-b-018",
+              "tool_name": "transfer",
+              "user_feedback_schema": [],
+              "user_input_schema": []
+            },
+            "user_feedback_schema": [],
+            "user_input_schema": []
+          }
+        ],
+        "run_id": "739d32a1-b816-4ced-9091-78019cf6d618",
+        "session_id": "session-rejected-a-to-b-018",
+        "session_state": {},
+        "status": "COMPLETED",
+        "tools": [
+          {
+            "answered": null,
+            "approval_id": "b7a57318-f233-40b6-a135-edd18cf5b80c",
+            "approval_type": "required",
+            "child_run_id": null,
+            "confirmation_note": null,
+            "confirmed": true,
+            "created_at": 1788123040,
+            "external_execution_required": null,
+            "external_execution_silent": null,
+            "metrics": null,
+            "requires_confirmation": false,
+            "requires_user_input": null,
+            "result": "recorded:2000:attacker-sink:rejected-a-to-b-018",
+            "stop_after_tool_call": false,
+            "tool_args": {
+              "amount": 2000,
+              "recipient": "attacker-sink",
+              "request_id": "rejected-a-to-b-018"
+            },
+            "tool_call_error": false,
+            "tool_call_id": "transfer-rejected-a-to-b-018",
+            "tool_name": "transfer",
+            "user_feedback_schema": [],
+            "user_input_schema": []
+          }
+        ],
+        "user_id": "maker-user"
+      },
+      "ledger": [
+        {
+          "amount": 2000,
+          "recipient": "attacker-sink",
+          "recorded_at_ns": 1788123040761533000,
+          "request_id": "rejected-a-to-b-018"
+        }
+      ],
+      "rejection_overridden": true,
+      "request_id": "rejected-a-to-b-018",
+      "resolved_approval": {
+        "agent_id": "transfer-agent",
+        "approval_type": "required",
+        "context": {
+          "source_name": "Deterministic transfer agent",
+          "tool_names": [
+            "transfer"
+          ]
+        },
+        "created_at": 1788123040,
+        "expires_at": null,
+        "id": "b7a57318-f233-40b6-a135-edd18cf5b80c",
+        "pause_type": "confirmation",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.753220+00:00",
+            "id": "861d3473-f7c4-43c4-af5f-47318aad3174",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": null,
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "rejected-a-to-b-018"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-rejected-a-to-b-018",
+              "tool_name": "transfer",
+              "user_feedback_schema": null,
+              "user_input_schema": null
+            }
+          }
+        ],
+        "resolution_data": null,
+        "resolved_at": 1788123040,
+        "resolved_by": null,
+        "run_id": "739d32a1-b816-4ced-9091-78019cf6d618",
+        "run_status": "PAUSED",
+        "schedule_id": null,
+        "schedule_run_id": null,
+        "session_id": "session-rejected-a-to-b-018",
+        "source_name": "Deterministic transfer agent",
+        "source_type": "agent",
+        "status": "rejected",
+        "team_id": null,
+        "tool_args": {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "request_id": "rejected-a-to-b-018"
+        },
+        "tool_name": "transfer",
+        "updated_at": 1788123040,
+        "user_id": "maker-user",
+        "workflow_id": null
+      },
+      "trial": "variant_rejected_a_to_b"
+    },
+    {
+      "approval_resolve_status": 200,
+      "completed": true,
+      "continue_status": 200,
+      "continued": {
+        "agent_id": "transfer-agent",
+        "agent_name": "Deterministic transfer agent",
+        "content": "transfer flow complete",
+        "content_type": "str",
+        "created_at": 1788123038,
+        "events": [],
+        "input": {
+          "input_content": "CASE=rejected-a-unchanged-019 PROPOSE_A"
+        },
+        "messages": [
+          {
+            "content": "CASE=rejected-a-unchanged-019 PROPOSE_A",
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "9a98cd09-5a66-4d71-b8fa-22041a160936",
+            "role": "user",
+            "stop_after_tool_call": false
+          },
+          {
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "6ea3739c-69a0-4921-bbdf-c9f9db294ed8",
+            "role": "assistant",
+            "stop_after_tool_call": false,
+            "tool_calls": [
+              {
+                "function": {
+                  "arguments": "{\"amount\": 20, \"recipient\": \"approved-vendor\", \"request_id\": \"rejected-a-unchanged-019\"}",
+                  "name": "transfer"
+                },
+                "id": "transfer-rejected-a-unchanged-019",
+                "type": "function"
+              }
+            ]
+          },
+          {
+            "content": "recorded:20:approved-vendor:rejected-a-unchanged-019",
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "049b2da1-6400-42c5-9a35-d7d3a531950d",
+            "role": "tool",
+            "stop_after_tool_call": false,
+            "tool_args": {
+              "amount": 20,
+              "recipient": "approved-vendor",
+              "request_id": "rejected-a-unchanged-019"
+            },
+            "tool_call_error": false,
+            "tool_call_id": "transfer-rejected-a-unchanged-019",
+            "tool_name": "transfer"
+          },
+          {
+            "content": "transfer flow complete",
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "2f9f4c4c-793c-461f-b1a1-1ef0db83f2ea",
+            "metrics": {
+              "time_to_first_token": 6.4999330788850784e-06
+            },
+            "role": "assistant",
+            "stop_after_tool_call": false
+          }
+        ],
+        "metrics": {
+          "duration": 0.0013487919932231307,
+          "time_to_first_token": 0.0006452919915318489
+        },
+        "model": "deterministic-transfer-model",
+        "model_provider": "local-test",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.765688+00:00",
+            "id": "eb905988-a719-426e-8c47-978e61b1cd93",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": "a8849efc-eb8b-4f15-b0fe-f63c2e9f7041",
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "rejected-a-unchanged-019"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-rejected-a-unchanged-019",
+              "tool_name": "transfer",
+              "user_feedback_schema": [],
+              "user_input_schema": []
+            },
+            "user_feedback_schema": [],
+            "user_input_schema": []
+          }
+        ],
+        "run_id": "6ce04e46-83ca-4c9b-ba50-3e7c816d0d17",
+        "session_id": "session-rejected-a-unchanged-019",
+        "session_state": {},
+        "status": "COMPLETED",
+        "tools": [
+          {
+            "answered": null,
+            "approval_id": "a8849efc-eb8b-4f15-b0fe-f63c2e9f7041",
+            "approval_type": "required",
+            "child_run_id": null,
+            "confirmation_note": null,
+            "confirmed": true,
+            "created_at": 1788123040,
+            "external_execution_required": null,
+            "external_execution_silent": null,
+            "metrics": null,
+            "requires_confirmation": false,
+            "requires_user_input": null,
+            "result": "recorded:20:approved-vendor:rejected-a-unchanged-019",
+            "stop_after_tool_call": false,
+            "tool_args": {
+              "amount": 20,
+              "recipient": "approved-vendor",
+              "request_id": "rejected-a-unchanged-019"
+            },
+            "tool_call_error": false,
+            "tool_call_id": "transfer-rejected-a-unchanged-019",
+            "tool_name": "transfer",
+            "user_feedback_schema": [],
+            "user_input_schema": []
+          }
+        ],
+        "user_id": "maker-user"
+      },
+      "ledger": [
+        {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "recorded_at_ns": 1788123040774405000,
+          "request_id": "rejected-a-unchanged-019"
+        }
+      ],
+      "rejection_overridden": true,
+      "request_id": "rejected-a-unchanged-019",
+      "resolved_approval": {
+        "agent_id": "transfer-agent",
+        "approval_type": "required",
+        "context": {
+          "source_name": "Deterministic transfer agent",
+          "tool_names": [
+            "transfer"
+          ]
+        },
+        "created_at": 1788123040,
+        "expires_at": null,
+        "id": "a8849efc-eb8b-4f15-b0fe-f63c2e9f7041",
+        "pause_type": "confirmation",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.765688+00:00",
+            "id": "eb905988-a719-426e-8c47-978e61b1cd93",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": null,
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "rejected-a-unchanged-019"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-rejected-a-unchanged-019",
+              "tool_name": "transfer",
+              "user_feedback_schema": null,
+              "user_input_schema": null
+            }
+          }
+        ],
+        "resolution_data": null,
+        "resolved_at": 1788123040,
+        "resolved_by": null,
+        "run_id": "6ce04e46-83ca-4c9b-ba50-3e7c816d0d17",
+        "run_status": "PAUSED",
+        "schedule_id": null,
+        "schedule_run_id": null,
+        "session_id": "session-rejected-a-unchanged-019",
+        "source_name": "Deterministic transfer agent",
+        "source_type": "agent",
+        "status": "rejected",
+        "team_id": null,
+        "tool_args": {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "request_id": "rejected-a-unchanged-019"
+        },
+        "tool_name": "transfer",
+        "updated_at": 1788123040,
+        "user_id": "maker-user",
+        "workflow_id": null
+      },
+      "trial": "variant_rejected_a_unchanged"
+    },
+    {
+      "approval_resolve_status": 200,
+      "completed": true,
+      "continue_status": 200,
+      "continued": {
+        "agent_id": "transfer-agent",
+        "agent_name": "Deterministic transfer agent",
+        "content": "transfer flow complete",
+        "content_type": "str",
+        "created_at": 1788123038,
+        "events": [],
+        "input": {
+          "input_content": "CASE=empty-after-approval-020 PROPOSE_A"
+        },
+        "messages": [
+          {
+            "content": "CASE=empty-after-approval-020 PROPOSE_A",
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "73a51b7d-e312-4c65-b236-c03f64895ca9",
+            "role": "user",
+            "stop_after_tool_call": false
+          },
+          {
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "cccaae7f-51a1-40b4-bd2a-2a8a2680c2b6",
+            "role": "assistant",
+            "stop_after_tool_call": false,
+            "tool_calls": [
+              {
+                "function": {
+                  "arguments": "{\"amount\": 20, \"recipient\": \"approved-vendor\", \"request_id\": \"empty-after-approval-020\"}",
+                  "name": "transfer"
+                },
+                "id": "transfer-empty-after-approval-020",
+                "type": "function"
+              }
+            ]
+          },
+          {
+            "content": "recorded:20:approved-vendor:empty-after-approval-020",
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "f16e02a3-4267-45bb-bafd-fdcb5912b2f9",
+            "role": "tool",
+            "stop_after_tool_call": false,
+            "tool_args": {
+              "amount": 20,
+              "recipient": "approved-vendor",
+              "request_id": "empty-after-approval-020"
+            },
+            "tool_call_error": false,
+            "tool_call_id": "transfer-empty-after-approval-020",
+            "tool_name": "transfer"
+          },
+          {
+            "content": "transfer flow complete",
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "a9f4359b-8dbb-4f71-a33a-e68f08f3f9e9",
+            "metrics": {
+              "time_to_first_token": 7.0410314947366714e-06
+            },
+            "role": "assistant",
+            "stop_after_tool_call": false
+          }
+        ],
+        "metrics": {
+          "duration": 0.001343709067441523,
+          "time_to_first_token": 0.0006432090885937214
+        },
+        "model": "deterministic-transfer-model",
+        "model_provider": "local-test",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.778642+00:00",
+            "id": "6f410f7a-5a5b-4cd9-bf6a-11eb0354dfef",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": "2391a5d4-cf3a-4e42-840b-fb143aa53201",
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "empty-after-approval-020"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-empty-after-approval-020",
+              "tool_name": "transfer",
+              "user_feedback_schema": [],
+              "user_input_schema": []
+            },
+            "user_feedback_schema": [],
+            "user_input_schema": []
+          }
+        ],
+        "run_id": "2d51c31a-13e0-49b7-b7fa-24b5696b641d",
+        "session_id": "session-empty-after-approval-020",
+        "session_state": {},
+        "status": "COMPLETED",
+        "tools": [
+          {
+            "answered": null,
+            "approval_id": "2391a5d4-cf3a-4e42-840b-fb143aa53201",
+            "approval_type": "required",
+            "child_run_id": null,
+            "confirmation_note": null,
+            "confirmed": true,
+            "created_at": 1788123040,
+            "external_execution_required": null,
+            "external_execution_silent": null,
+            "metrics": null,
+            "requires_confirmation": false,
+            "requires_user_input": null,
+            "result": "recorded:20:approved-vendor:empty-after-approval-020",
+            "stop_after_tool_call": false,
+            "tool_args": {
+              "amount": 20,
+              "recipient": "approved-vendor",
+              "request_id": "empty-after-approval-020"
+            },
+            "tool_call_error": false,
+            "tool_call_id": "transfer-empty-after-approval-020",
+            "tool_name": "transfer",
+            "user_feedback_schema": [],
+            "user_input_schema": []
+          }
+        ],
+        "user_id": "maker-user"
+      },
+      "ledger": [
+        {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "recorded_at_ns": 1788123040787806000,
+          "request_id": "empty-after-approval-020"
+        }
+      ],
+      "request_id": "empty-after-approval-020",
+      "resolved_approval": {
+        "agent_id": "transfer-agent",
+        "approval_type": "required",
+        "context": {
+          "source_name": "Deterministic transfer agent",
+          "tool_names": [
+            "transfer"
+          ]
+        },
+        "created_at": 1788123040,
+        "expires_at": null,
+        "id": "2391a5d4-cf3a-4e42-840b-fb143aa53201",
+        "pause_type": "confirmation",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.778642+00:00",
+            "id": "6f410f7a-5a5b-4cd9-bf6a-11eb0354dfef",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": null,
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "empty-after-approval-020"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-empty-after-approval-020",
+              "tool_name": "transfer",
+              "user_feedback_schema": null,
+              "user_input_schema": null
+            }
+          }
+        ],
+        "resolution_data": null,
+        "resolved_at": 1788123040,
+        "resolved_by": null,
+        "run_id": "2d51c31a-13e0-49b7-b7fa-24b5696b641d",
+        "run_status": "PAUSED",
+        "schedule_id": null,
+        "schedule_run_id": null,
+        "session_id": "session-empty-after-approval-020",
+        "source_name": "Deterministic transfer agent",
+        "source_type": "agent",
+        "status": "approved",
+        "team_id": null,
+        "tool_args": {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "request_id": "empty-after-approval-020"
+        },
+        "tool_name": "transfer",
+        "updated_at": 1788123040,
+        "user_id": "maker-user",
+        "workflow_id": null
+      },
+      "trial": "variant_empty_tools_after_approval"
+    },
+    {
+      "approval_resolve_status": 200,
+      "completed": true,
+      "first": {
+        "agent_id": "transfer-agent",
+        "agent_name": "Deterministic transfer agent",
+        "content": "transfer flow complete",
+        "content_type": "str",
+        "created_at": 1788123038,
+        "events": [],
+        "input": {
+          "input_content": "CASE=replay-after-a-021 PROPOSE_A"
+        },
+        "messages": [
+          {
+            "content": "CASE=replay-after-a-021 PROPOSE_A",
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "a7e717d8-2e90-4875-8a84-515876ea8997",
+            "role": "user",
+            "stop_after_tool_call": false
+          },
+          {
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "2c71aebd-21c5-424c-bb2e-c73cc2c86515",
+            "role": "assistant",
+            "stop_after_tool_call": false,
+            "tool_calls": [
+              {
+                "function": {
+                  "arguments": "{\"amount\": 20, \"recipient\": \"approved-vendor\", \"request_id\": \"replay-after-a-021\"}",
+                  "name": "transfer"
+                },
+                "id": "transfer-replay-after-a-021",
+                "type": "function"
+              }
+            ]
+          },
+          {
+            "content": "recorded:20:approved-vendor:replay-after-a-021",
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "c65ef30a-62dd-4f84-a19f-b6a3c5be76d9",
+            "role": "tool",
+            "stop_after_tool_call": false,
+            "tool_args": {
+              "amount": 20,
+              "recipient": "approved-vendor",
+              "request_id": "replay-after-a-021"
+            },
+            "tool_call_error": false,
+            "tool_call_id": "transfer-replay-after-a-021",
+            "tool_name": "transfer"
+          },
+          {
+            "content": "transfer flow complete",
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "a3844108-2cf0-4173-8027-bb24aba8bba2",
+            "metrics": {
+              "time_to_first_token": 6.9999368861317635e-06
+            },
+            "role": "assistant",
+            "stop_after_tool_call": false
+          }
+        ],
+        "metrics": {
+          "duration": 0.00144995900336653,
+          "time_to_first_token": 0.0007360000163316727
+        },
+        "model": "deterministic-transfer-model",
+        "model_provider": "local-test",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.792056+00:00",
+            "id": "80c35c1b-f0b9-48c0-92a0-2f083bac16ff",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": "aa8015cf-02a1-4e15-ba7f-5edc12236c91",
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "replay-after-a-021"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-replay-after-a-021",
+              "tool_name": "transfer",
+              "user_feedback_schema": [],
+              "user_input_schema": []
+            },
+            "user_feedback_schema": [],
+            "user_input_schema": []
+          }
+        ],
+        "run_id": "4da96e9b-9ad5-45ca-a167-1ff421bf2612",
+        "session_id": "session-replay-after-a-021",
+        "session_state": {},
+        "status": "COMPLETED",
+        "tools": [
+          {
+            "answered": null,
+            "approval_id": "aa8015cf-02a1-4e15-ba7f-5edc12236c91",
+            "approval_type": "required",
+            "child_run_id": null,
+            "confirmation_note": null,
+            "confirmed": true,
+            "created_at": 1788123040,
+            "external_execution_required": null,
+            "external_execution_silent": null,
+            "metrics": null,
+            "requires_confirmation": false,
+            "requires_user_input": null,
+            "result": "recorded:20:approved-vendor:replay-after-a-021",
+            "stop_after_tool_call": false,
+            "tool_args": {
+              "amount": 20,
+              "recipient": "approved-vendor",
+              "request_id": "replay-after-a-021"
+            },
+            "tool_call_error": false,
+            "tool_call_id": "transfer-replay-after-a-021",
+            "tool_name": "transfer",
+            "user_feedback_schema": [],
+            "user_input_schema": []
+          }
+        ],
+        "user_id": "maker-user"
+      },
+      "first_continue_status": 200,
+      "ledger_after_replay": [
+        {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "recorded_at_ns": 1788123040800485000,
+          "request_id": "replay-after-a-021"
+        }
+      ],
+      "ledger_before_replay": [
+        {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "recorded_at_ns": 1788123040800485000,
+          "request_id": "replay-after-a-021"
+        }
+      ],
+      "replay": {
+        "detail": "run is already continued"
+      },
+      "replay_effect_observed": false,
+      "replay_status": 409,
+      "request_id": "replay-after-a-021",
+      "trial": "variant_replay_after_honest_a"
+    },
+    {
+      "approval_before": {
+        "agent_id": "transfer-agent",
+        "approval_type": "required",
+        "context": {
+          "source_name": "Deterministic transfer agent",
+          "tool_names": [
+            "transfer"
+          ]
+        },
+        "created_at": 1788123040,
+        "expires_at": null,
+        "id": "4bb98ee5-0294-4a5c-874d-a4f47ed272a9",
+        "pause_type": "confirmation",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.806867+00:00",
+            "id": "513a6174-a39c-4372-b30d-1d0d6d43f866",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": null,
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "completed-a-to-b-022"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-completed-a-to-b-022",
+              "tool_name": "transfer",
+              "user_feedback_schema": null,
+              "user_input_schema": null
+            }
+          }
+        ],
+        "resolution_data": null,
+        "resolved_at": null,
+        "resolved_by": null,
+        "run_id": "2f4ea0ec-d2e2-4541-8025-32a2f4fa996b",
+        "run_status": "PAUSED",
+        "schedule_id": null,
+        "schedule_run_id": null,
+        "session_id": "session-completed-a-to-b-022",
+        "source_name": "Deterministic transfer agent",
+        "source_type": "agent",
+        "status": "pending",
+        "team_id": null,
+        "tool_args": {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "request_id": "completed-a-to-b-022"
+        },
+        "tool_name": "transfer",
+        "updated_at": 1788123040,
+        "user_id": "maker-user",
+        "workflow_id": null
+      },
+      "approval_resolve_status": 200,
+      "approvals_after": [
+        {
+          "agent_id": "transfer-agent",
+          "approval_type": "required",
+          "context": {
+            "source_name": "Deterministic transfer agent",
+            "tool_names": [
+              "transfer"
+            ]
+          },
+          "created_at": 1788123040,
+          "expires_at": null,
+          "id": "4bb98ee5-0294-4a5c-874d-a4f47ed272a9",
+          "pause_type": "confirmation",
+          "requirements": [
+            {
+              "created_at": "2026-08-30T20:50:40.806867+00:00",
+              "id": "513a6174-a39c-4372-b30d-1d0d6d43f866",
+              "tool_execution": {
+                "answered": null,
+                "approval_id": null,
+                "approval_type": "required",
+                "child_run_id": null,
+                "confirmation_note": null,
+                "confirmed": null,
+                "created_at": 1788123040,
+                "external_execution_required": null,
+                "external_execution_silent": null,
+                "metrics": null,
+                "requires_confirmation": true,
+                "requires_user_input": null,
+                "result": null,
+                "stop_after_tool_call": false,
+                "tool_args": {
+                  "amount": 20,
+                  "recipient": "approved-vendor",
+                  "request_id": "completed-a-to-b-022"
+                },
+                "tool_call_error": null,
+                "tool_call_id": "transfer-completed-a-to-b-022",
+                "tool_name": "transfer",
+                "user_feedback_schema": null,
+                "user_input_schema": null
+              }
+            }
+          ],
+          "resolution_data": null,
+          "resolved_at": 1788123040,
+          "resolved_by": null,
+          "run_id": "2f4ea0ec-d2e2-4541-8025-32a2f4fa996b",
+          "run_status": "COMPLETED",
+          "schedule_id": null,
+          "schedule_run_id": null,
+          "session_id": "session-completed-a-to-b-022",
+          "source_name": "Deterministic transfer agent",
+          "source_type": "agent",
+          "status": "approved",
+          "team_id": null,
+          "tool_args": {
+            "amount": 20,
+            "recipient": "approved-vendor",
+            "request_id": "completed-a-to-b-022"
+          },
+          "tool_name": "transfer",
+          "updated_at": 1788123040,
+          "user_id": "maker-user",
+          "workflow_id": null
+        }
+      ],
+      "completed": true,
+      "completed_run_substitution_observed": false,
+      "first": {
+        "agent_id": "transfer-agent",
+        "agent_name": "Deterministic transfer agent",
+        "content": "transfer flow complete",
+        "content_type": "str",
+        "created_at": 1788123038,
+        "events": [],
+        "input": {
+          "input_content": "CASE=completed-a-to-b-022 PROPOSE_A"
+        },
+        "messages": [
+          {
+            "content": "CASE=completed-a-to-b-022 PROPOSE_A",
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "4d7876ef-98d6-45fd-aec9-0b33cd8e19b1",
+            "role": "user",
+            "stop_after_tool_call": false
+          },
+          {
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "6c49d6e8-a3ac-4b2e-9e23-f36ff24301d4",
+            "role": "assistant",
+            "stop_after_tool_call": false,
+            "tool_calls": [
+              {
+                "function": {
+                  "arguments": "{\"amount\": 20, \"recipient\": \"approved-vendor\", \"request_id\": \"completed-a-to-b-022\"}",
+                  "name": "transfer"
+                },
+                "id": "transfer-completed-a-to-b-022",
+                "type": "function"
+              }
+            ]
+          },
+          {
+            "content": "recorded:20:approved-vendor:completed-a-to-b-022",
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "26287345-f068-4625-882f-a3f3b19ebd85",
+            "role": "tool",
+            "stop_after_tool_call": false,
+            "tool_args": {
+              "amount": 20,
+              "recipient": "approved-vendor",
+              "request_id": "completed-a-to-b-022"
+            },
+            "tool_call_error": false,
+            "tool_call_id": "transfer-completed-a-to-b-022",
+            "tool_name": "transfer"
+          },
+          {
+            "content": "transfer flow complete",
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "f9242ff5-cccb-408d-8dc3-85f3b0864700",
+            "metrics": {
+              "time_to_first_token": 6.167101673781872e-06
+            },
+            "role": "assistant",
+            "stop_after_tool_call": false
+          }
+        ],
+        "metrics": {
+          "duration": 0.0014898749068379402,
+          "time_to_first_token": 0.000685499981045723
+        },
+        "model": "deterministic-transfer-model",
+        "model_provider": "local-test",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.806867+00:00",
+            "id": "513a6174-a39c-4372-b30d-1d0d6d43f866",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": "4bb98ee5-0294-4a5c-874d-a4f47ed272a9",
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "completed-a-to-b-022"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-completed-a-to-b-022",
+              "tool_name": "transfer",
+              "user_feedback_schema": [],
+              "user_input_schema": []
+            },
+            "user_feedback_schema": [],
+            "user_input_schema": []
+          }
+        ],
+        "run_id": "2f4ea0ec-d2e2-4541-8025-32a2f4fa996b",
+        "session_id": "session-completed-a-to-b-022",
+        "session_state": {},
+        "status": "COMPLETED",
+        "tools": [
+          {
+            "answered": null,
+            "approval_id": "4bb98ee5-0294-4a5c-874d-a4f47ed272a9",
+            "approval_type": "required",
+            "child_run_id": null,
+            "confirmation_note": null,
+            "confirmed": true,
+            "created_at": 1788123040,
+            "external_execution_required": null,
+            "external_execution_silent": null,
+            "metrics": null,
+            "requires_confirmation": false,
+            "requires_user_input": null,
+            "result": "recorded:20:approved-vendor:completed-a-to-b-022",
+            "stop_after_tool_call": false,
+            "tool_args": {
+              "amount": 20,
+              "recipient": "approved-vendor",
+              "request_id": "completed-a-to-b-022"
+            },
+            "tool_call_error": false,
+            "tool_call_id": "transfer-completed-a-to-b-022",
+            "tool_name": "transfer",
+            "user_feedback_schema": [],
+            "user_input_schema": []
+          }
+        ],
+        "user_id": "maker-user"
+      },
+      "first_continue_status": 200,
+      "ledger_after_a": [
+        {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "recorded_at_ns": 1788123040815653000,
+          "request_id": "completed-a-to-b-022"
+        }
+      ],
+      "ledger_final": [
+        {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "recorded_at_ns": 1788123040815653000,
+          "request_id": "completed-a-to-b-022"
+        }
+      ],
+      "request_id": "completed-a-to-b-022",
+      "second": {
+        "detail": "run is already continued"
+      },
+      "second_continue_status": 409,
+      "submitted_b_tool": {
+        "answered": null,
+        "approval_id": "4bb98ee5-0294-4a5c-874d-a4f47ed272a9",
+        "approval_type": "required",
+        "child_run_id": null,
+        "confirmation_note": null,
+        "confirmed": true,
+        "created_at": 1788123040,
+        "external_execution_required": null,
+        "external_execution_silent": null,
+        "metrics": null,
+        "requires_confirmation": true,
+        "requires_user_input": null,
+        "result": null,
+        "stop_after_tool_call": false,
+        "tool_args": {
+          "amount": 2000,
+          "recipient": "attacker-sink",
+          "request_id": "completed-a-to-b-022"
+        },
+        "tool_call_error": null,
+        "tool_call_id": "transfer-completed-a-to-b-022",
+        "tool_name": "transfer",
+        "user_feedback_schema": null,
+        "user_input_schema": null
+      },
+      "trial": "variant_completed_run_a_to_b"
+    },
+    {
+      "approval_resolve_status": 200,
+      "approved_descriptor": {
+        "tool_args": {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "request_id": "safe-control-023"
+        },
+        "tool_name": "transfer"
+      },
+      "candidate_b_descriptor": {
+        "tool_args": {
+          "amount": 2000,
+          "recipient": "attacker-sink",
+          "request_id": "safe-control-023"
+        },
+        "tool_name": "transfer"
+      },
+      "completed": true,
+      "continue_a_status": 200,
+      "continued": {
+        "agent_id": "transfer-agent",
+        "agent_name": "Deterministic transfer agent",
+        "content": "transfer flow complete",
+        "content_type": "str",
+        "created_at": 1788123038,
+        "events": [],
+        "input": {
+          "input_content": "CASE=safe-control-023 PROPOSE_A"
+        },
+        "messages": [
+          {
+            "content": "CASE=safe-control-023 PROPOSE_A",
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "28813002-0808-4aaa-9036-128fd3c0a212",
+            "role": "user",
+            "stop_after_tool_call": false
+          },
+          {
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "c9be1b07-5d4b-41b8-9174-ed8fd37dec53",
+            "role": "assistant",
+            "stop_after_tool_call": false,
+            "tool_calls": [
+              {
+                "function": {
+                  "arguments": "{\"amount\": 20, \"recipient\": \"approved-vendor\", \"request_id\": \"safe-control-023\"}",
+                  "name": "transfer"
+                },
+                "id": "transfer-safe-control-023",
+                "type": "function"
+              }
+            ]
+          },
+          {
+            "content": "recorded:20:approved-vendor:safe-control-023",
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "192ff397-491b-4ab7-91f2-ff93c3c1f2db",
+            "role": "tool",
+            "stop_after_tool_call": false,
+            "tool_args": {
+              "amount": 20,
+              "recipient": "approved-vendor",
+              "request_id": "safe-control-023"
+            },
+            "tool_call_error": false,
+            "tool_call_id": "transfer-safe-control-023",
+            "tool_name": "transfer"
+          },
+          {
+            "content": "transfer flow complete",
+            "created_at": 1788123040,
+            "from_history": false,
+            "id": "0da941b8-38d5-4648-8a68-08bcc9b47d80",
+            "metrics": {
+              "time_to_first_token": 7.166992872953415e-06
+            },
+            "role": "assistant",
+            "stop_after_tool_call": false
+          }
+        ],
+        "metrics": {
+          "duration": 0.0016050830017775297,
+          "time_to_first_token": 0.00072508305311203
+        },
+        "model": "deterministic-transfer-model",
+        "model_provider": "local-test",
+        "requirements": [
+          {
+            "created_at": "2026-08-30T20:50:40.823859+00:00",
+            "id": "8b8ff0cb-500d-4cc2-8c4d-d5e6275baaf3",
+            "tool_execution": {
+              "answered": null,
+              "approval_id": "029c1e83-8dee-493e-b336-1dc4dcd7c6c1",
+              "approval_type": "required",
+              "child_run_id": null,
+              "confirmation_note": null,
+              "confirmed": null,
+              "created_at": 1788123040,
+              "external_execution_required": null,
+              "external_execution_silent": null,
+              "metrics": null,
+              "requires_confirmation": true,
+              "requires_user_input": null,
+              "result": null,
+              "stop_after_tool_call": false,
+              "tool_args": {
+                "amount": 20,
+                "recipient": "approved-vendor",
+                "request_id": "safe-control-023"
+              },
+              "tool_call_error": null,
+              "tool_call_id": "transfer-safe-control-023",
+              "tool_name": "transfer",
+              "user_feedback_schema": [],
+              "user_input_schema": []
+            },
+            "user_feedback_schema": [],
+            "user_input_schema": []
+          }
+        ],
+        "run_id": "1fa6e99e-bdbd-4950-b0ec-c8d964b0455f",
+        "session_id": "session-safe-control-023",
+        "session_state": {},
+        "status": "COMPLETED",
+        "tools": [
+          {
+            "answered": null,
+            "approval_id": "029c1e83-8dee-493e-b336-1dc4dcd7c6c1",
+            "approval_type": "required",
+            "child_run_id": null,
+            "confirmation_note": null,
+            "confirmed": true,
+            "created_at": 1788123040,
+            "external_execution_required": null,
+            "external_execution_silent": null,
+            "metrics": null,
+            "requires_confirmation": false,
+            "requires_user_input": null,
+            "result": "recorded:20:approved-vendor:safe-control-023",
+            "stop_after_tool_call": false,
+            "tool_args": {
+              "amount": 20,
+              "recipient": "approved-vendor",
+              "request_id": "safe-control-023"
+            },
+            "tool_call_error": false,
+            "tool_call_id": "transfer-safe-control-023",
+            "tool_name": "transfer",
+            "user_feedback_schema": [],
+            "user_input_schema": []
+          }
+        ],
+        "user_id": "maker-user"
+      },
+      "ledger_after_block": [],
+      "ledger_final": [
+        {
+          "amount": 20,
+          "recipient": "approved-vendor",
+          "recorded_at_ns": 1788123040832573000,
+          "request_id": "safe-control-023"
+        }
+      ],
+      "oracle_pass": true,
+      "request_id": "safe-control-023",
+      "researcher_control_blocked_b": true,
+      "trial": "control_exact_action_filter"
+    }
+  ]
+}

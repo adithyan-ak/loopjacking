@@ -1,0 +1,36 @@
+{
+  "canonicalOperationB": "/bin/sh -lc \"$0 \\\"$1\\\"\" /usr/bin/touch /tmp/openclaw-loopjacking-range-probe.marker",
+  "completeUnderlyingRequest": [
+    "/bin/sh",
+    "-lc",
+    "$0 \"$1\"",
+    "/usr/bin/touch",
+    "/tmp/openclaw-loopjacking-range-probe.marker"
+  ],
+  "executed": false,
+  "packageVersion": "2026.5.16-beta.7",
+  "productDerivedApprovalTextWithoutRaw": {
+    "argv": [
+      "/bin/sh",
+      "-lc",
+      "$0 \"$1\"",
+      "/usr/bin/touch",
+      "/tmp/openclaw-loopjacking-range-probe.marker"
+    ],
+    "commandText": "/bin/sh -lc \"$0 \\\"$1\\\"\" /usr/bin/touch /tmp/openclaw-loopjacking-range-probe.marker",
+    "ok": true,
+    "previewText": null,
+    "shellPayload": null
+  },
+  "productResolutionWithRawA": {
+    "details": {
+      "code": "RAW_COMMAND_MISMATCH",
+      "formattedArgv": "/bin/sh -lc \"$0 \\\"$1\\\"\" /usr/bin/touch /tmp/openclaw-loopjacking-range-probe.marker",
+      "inferred": "/bin/sh -lc \"$0 \\\"$1\\\"\" /usr/bin/touch /tmp/openclaw-loopjacking-range-probe.marker",
+      "rawCommand": "$0 \"$1\""
+    },
+    "message": "INVALID_REQUEST: rawCommand does not match command",
+    "ok": false
+  },
+  "visibleA": "$0 \"$1\""
+}

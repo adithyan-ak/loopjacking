@@ -1,0 +1,30 @@
+{
+  "claim": "Whether released Agno AgentOS consumes admin approval for A while executing caller-substituted B through its regular-Agent HTTP continuation path.",
+  "contradicting_evidence": [
+    "Any attack cell without a B ledger event is retained in results.json.",
+    "Changed-tool-call-ID and missing-approval-ID variants are recorded separately."
+  ],
+  "limitations": [
+    "The model and harmless ledger are deterministic local fixtures.",
+    "The approver uses AgentOS's documented admin scope and therefore has broad authority; the attacker does not possess that token.",
+    "The exact-action safe control is researcher-authored, not an Agno fixed version.",
+    "GitHub stars and this local configuration do not establish deployment prevalence."
+  ],
+  "next_falsifying_experiment": "Independently rerun from this bundle, inspect the first product-owned failed comparison, and test any vendor-provided fixed release or action-bound configuration.",
+  "oracle": {
+    "approved": {
+      "amount": 20,
+      "recipient": "approved-vendor",
+      "tool": "transfer"
+    },
+    "strict_trace_supported": true,
+    "substituted": {
+      "amount": 2000,
+      "recipient": "attacker-sink",
+      "tool": "transfer"
+    }
+  },
+  "result": "strict_loopjacking_trace_observed",
+  "target": "agno==3.0.9",
+  "verified_at": "2026-09-10T07:48:54.979481+00:00"
+}

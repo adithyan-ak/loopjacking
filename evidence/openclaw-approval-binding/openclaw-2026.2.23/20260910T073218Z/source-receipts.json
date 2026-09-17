@@ -1,0 +1,17 @@
+{
+  "files": {
+    "src/gateway/node-invoke-system-run-approval.ts": {
+      "sha256": "1551175c34aaefc690e75f6fb0e5045016466aa8fa63563c626deb71609e31bf",
+      "size": 8230
+    },
+    "src/infra/system-run-command.ts": {
+      "sha256": "a726dc0bfec2195fa7c7fc1c638129322acfdecb40640c101ca9f9ca1ab32938",
+      "size": 3649
+    },
+    "src/node-host/invoke-system-run.ts": {
+      "sha256": "b948361f16172466a90c70a599b527ed37ccfa3ec9923fbb5a9d78922e1cf9ed",
+      "size": 14877
+    }
+  },
+  "resolver_commit": "bd8b9af9a71709886a38cf285037398f87522996"
+}

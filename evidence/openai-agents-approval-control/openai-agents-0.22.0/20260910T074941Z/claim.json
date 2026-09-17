@@ -1,0 +1,23 @@
+{
+  "claim": "Released openai-agents==0.22.0 rejected a same-call-ID raw invocation mutation from approved A to B after RunState serialization and restoration, while unchanged approved A executed.",
+  "contradicting_evidence": [
+    "The SDK exposes intentional sticky approval with always_approve=True; that distinct policy was not tested or characterized as per-call approval."
+  ],
+  "limitations": [
+    "This tests ordinary function-tool per-call approval in one current released SDK version, not every approval mode or historical version.",
+    "The mutation preserves the original canonical approval and invocation records; arbitrary forgery of every serialized state field is outside this experiment.",
+    "The deterministic model and harmless ledger are experiment fixtures; approval serialization, restoration, and enforcement are SDK code.",
+    "This is a negative control and does not establish an OpenAI Agents SDK vulnerability."
+  ],
+  "next_falsifying_experiment": "If a future release changes per-call binding, rerun this matrix and require mutated B to remain non-executing.",
+  "oracle": {
+    "direct_b": "unapproved B pauses and executes nothing",
+    "honest_a": "three serialized approved-A states restore and execute exact A",
+    "mutated_b": "three same-call-ID A-to-B raw invocation mutations raise ModelBehaviorError and execute nothing",
+    "strict_negative_control_pass": true
+  },
+  "reproduction_command": "bash experiments/openai-agents-approval-control/run.sh",
+  "result": "ordinary_per_call_approval_is_action_bound",
+  "target": "openai-agents==0.22.0",
+  "verified_at": "2026-09-10T07:49:41.581548+00:00"
+}

@@ -1,0 +1,6 @@
+{
+  "contains_fix_commit": true,
+  "fix_commit": "0f0a680d3df81739ea5088a2f88e65f938b7936b",
+  "git_commit": "f066dd2f31c231f38fbcaacd6f6dfce0801143b3",
+  "git_tag": "v2026.5.12"
+}

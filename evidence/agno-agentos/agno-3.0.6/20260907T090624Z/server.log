@@ -1,0 +1,143 @@
+INFO Adding AgentOS auth middleware (JWT algorithm: HS256)                      
+INFO:     Started server process [10243]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:59564 (Press CTRL+C to quit)
+INFO:     127.0.0.1:59585 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=1491772c-98f5-43a4-af39-d975a53f7d0d&limit=100 HTTP/1.1" 200 OK
+WARNING  Insufficient scopes for POST                                           
+         /approvals/f8fce1a6-6537-4e7a-9344-c6d5ddf4f826/resolve. Required:     
+         ['approvals:write'], User has: ['agents:run']                          
+INFO:     127.0.0.1:59586 - "POST /approvals/f8fce1a6-6537-4e7a-9344-c6d5ddf4f826/resolve HTTP/1.1" 403 Forbidden
+ERROR    HTTP exception: 403 This run requires admin approval before it can be  
+         continued                                                              
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs/1491772c-98f5-43a4-af39-d975a53f7d0d/continue HTTP/1.1" 403 Forbidden
+ERROR    HTTP exception: 403 This run requires admin approval before it can be  
+         continued                                                              
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs/1491772c-98f5-43a4-af39-d975a53f7d0d/continue HTTP/1.1" 403 Forbidden
+WARNING  Insufficient scopes for POST                                           
+         /agents/transfer-agent/runs/1491772c-98f5-43a4-af39-d975a53f7d0d/contin
+         ue. Required: ['agents:run'], User has: ['config:read']                
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs/1491772c-98f5-43a4-af39-d975a53f7d0d/continue HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=86ff1df0-bc2d-43c8-9076-df72b511223a&limit=100 HTTP/1.1" 200 OK
+WARNING  Insufficient scopes for POST                                           
+         /approvals/bc53c4be-7889-4160-aae2-8f2fe95b9184/resolve. Required:     
+         ['approvals:write'], User has: ['agents:run']                          
+INFO:     127.0.0.1:59586 - "POST /approvals/bc53c4be-7889-4160-aae2-8f2fe95b9184/resolve HTTP/1.1" 403 Forbidden
+ERROR    HTTP exception: 403 This run requires admin approval before it can be  
+         continued                                                              
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs/86ff1df0-bc2d-43c8-9076-df72b511223a/continue HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=c2b6dba1-b359-4d56-9262-a1f335cc4d6e&limit=100 HTTP/1.1" 200 OK
+WARNING  Insufficient scopes for POST                                           
+         /approvals/7b15fe7d-ffff-4a59-967e-46fa7ce2984e/resolve. Required:     
+         ['approvals:write'], User has: ['agents:run']                          
+INFO:     127.0.0.1:59586 - "POST /approvals/7b15fe7d-ffff-4a59-967e-46fa7ce2984e/resolve HTTP/1.1" 403 Forbidden
+ERROR    HTTP exception: 403 This run requires admin approval before it can be  
+         continued                                                              
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs/c2b6dba1-b359-4d56-9262-a1f335cc4d6e/continue HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=db2c5991-e94b-472a-8d90-2612ae5a7ab5&limit=100 HTTP/1.1" 200 OK
+WARNING  Insufficient scopes for POST                                           
+         /approvals/7a7da702-7301-4091-81f4-36a8dcdb4dc2/resolve. Required:     
+         ['approvals:write'], User has: ['agents:run']                          
+INFO:     127.0.0.1:59586 - "POST /approvals/7a7da702-7301-4091-81f4-36a8dcdb4dc2/resolve HTTP/1.1" 403 Forbidden
+ERROR    HTTP exception: 403 This run requires admin approval before it can be  
+         continued                                                              
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs/db2c5991-e94b-472a-8d90-2612ae5a7ab5/continue HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=8f6b8e55-131f-43e2-aec5-6c0afce582db&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /approvals/a4c48065-ec3f-48a5-af66-ec63e28a74f5/resolve HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs/8f6b8e55-131f-43e2-aec5-6c0afce582db/continue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=8f6b8e55-131f-43e2-aec5-6c0afce582db&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=6f2c9029-26dc-49f0-b004-2da80e5361f6&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /approvals/887f87cf-244e-4bfe-90d1-76b813f0366f/resolve HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs/6f2c9029-26dc-49f0-b004-2da80e5361f6/continue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=6f2c9029-26dc-49f0-b004-2da80e5361f6&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=55d28d3c-522e-499d-b7bb-21a997041b3e&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /approvals/448837b4-4a57-4af9-a443-e4f3df6b083b/resolve HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs/55d28d3c-522e-499d-b7bb-21a997041b3e/continue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=55d28d3c-522e-499d-b7bb-21a997041b3e&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=4668ef71-468d-4b11-92a7-ac10b96e074c&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /approvals/bcd18116-79f0-45ee-a4c2-68844e9ca124/resolve HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs/4668ef71-468d-4b11-92a7-ac10b96e074c/continue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=4668ef71-468d-4b11-92a7-ac10b96e074c&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=9369dc8d-1632-4c7f-bbc1-a94e6c4a789b&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /approvals/30db5c87-e3d9-4378-9155-9e4f0f2a1bdd/resolve HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs/9369dc8d-1632-4c7f-bbc1-a94e6c4a789b/continue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=9369dc8d-1632-4c7f-bbc1-a94e6c4a789b&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=db03455f-8de2-48b9-8d6e-e79eb9e86a65&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /approvals/bc30658d-06b4-4f6e-b7b6-b3e2c44fb8ee/resolve HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs/db03455f-8de2-48b9-8d6e-e79eb9e86a65/continue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=db03455f-8de2-48b9-8d6e-e79eb9e86a65&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=ed939373-7717-41f0-a493-6a8eecf371b6&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /approvals/e4919b7e-b1f2-4966-8398-d46beef5208b/resolve HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs/ed939373-7717-41f0-a493-6a8eecf371b6/continue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=ed939373-7717-41f0-a493-6a8eecf371b6&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=688b621a-540b-49c9-a04b-8706db692bf8&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /approvals/e42d02a7-a80b-4fbd-9524-9ffbff224b03/resolve HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs/688b621a-540b-49c9-a04b-8706db692bf8/continue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=688b621a-540b-49c9-a04b-8706db692bf8&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=741f8cf1-1ac3-4f40-9f25-dfdb591b515f&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /approvals/0cd67d2d-e453-4fa6-b04a-68ce5c028495/resolve HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs/741f8cf1-1ac3-4f40-9f25-dfdb591b515f/continue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=741f8cf1-1ac3-4f40-9f25-dfdb591b515f&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=5c811e2c-c611-46b0-9b85-08e746e2f8cc&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /approvals/f904216e-7bdc-4667-8edc-2a59882ce417/resolve HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs/5c811e2c-c611-46b0-9b85-08e746e2f8cc/continue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=5c811e2c-c611-46b0-9b85-08e746e2f8cc&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=90c00608-da0f-4a39-873e-36117c56165a&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /approvals/1ac82ea1-34d7-4085-9b1e-420d091216a2/resolve HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs/90c00608-da0f-4a39-873e-36117c56165a/continue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=109b86c8-8b00-43e9-bad3-97ad28987e3d&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /approvals/a00d328b-1d1d-467f-a9cb-0183c81bdc54/resolve HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs/109b86c8-8b00-43e9-bad3-97ad28987e3d/continue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=1c1a930b-5404-4096-9a76-64b362d46b3b&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /approvals/441ff382-b4d9-464b-8c7d-54656c550b2c/resolve HTTP/1.1" 200 OK
+ERROR    HTTP exception: 404 Run not found                                      
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs/1c1a930b-5404-4096-9a76-64b362d46b3b/continue HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=52e949d4-8f4a-4752-88d0-5a13afc32b69&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /approvals/1362f2e8-4da3-438d-a3cb-304c4a5585e8/resolve HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs/52e949d4-8f4a-4752-88d0-5a13afc32b69/continue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=69fab820-236e-40f3-a638-07c70ee11721&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /approvals/c674e158-e4cf-498f-a9f7-11b09ccae0df/resolve HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs/69fab820-236e-40f3-a638-07c70ee11721/continue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=6f592954-679b-49e7-8215-f5abbf4d645a&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /approvals/6a78ae54-8b01-433a-ac41-055e7cc79666/resolve HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs/6f592954-679b-49e7-8215-f5abbf4d645a/continue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=44bf46ec-ef45-41f3-8822-c333c611ee3a&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /approvals/b7e4a180-ef79-4dcc-802b-5484cf140d21/resolve HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs/44bf46ec-ef45-41f3-8822-c333c611ee3a/continue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs/44bf46ec-ef45-41f3-8822-c333c611ee3a/continue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=c59c987d-2436-4b07-8d12-07d01ad09822&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /approvals/8f498cd7-d0b1-42b5-975b-059d48484f68/resolve HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs/c59c987d-2436-4b07-8d12-07d01ad09822/continue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs/c59c987d-2436-4b07-8d12-07d01ad09822/continue HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=c59c987d-2436-4b07-8d12-07d01ad09822&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "GET /approvals?run_id=f3e67ad3-cb09-4bbe-acab-ad3074ed9327&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /approvals/d711c220-9527-47b1-a373-928d5af45107/resolve HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59586 - "POST /agents/transfer-agent/runs/f3e67ad3-cb09-4bbe-acab-ad3074ed9327/continue HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [10243]

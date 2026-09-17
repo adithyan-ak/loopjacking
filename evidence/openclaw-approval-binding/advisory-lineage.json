@@ -1,0 +1,59 @@
+{
+  "checked_at": "2026-09-10",
+  "limitations": [
+    "The duplicate classification is an evidence-led inference; GitHub has not been asked to formally merge or withdraw either record.",
+    "GitHub's repository advisory page and global Advisory Database API expose differing publication/severity metadata for GHSA-2j8v-hwgc-x698; neither is used to derive a generic Loopjacking severity."
+  ],
+  "package_facts": {
+    "nearest_2026.5.16_artifact_checked": "2026.5.16-beta.7",
+    "nearest_prior_stable_checked": "2026.5.12",
+    "registry_response": "version not found: 2026.5.16",
+    "stable_2026.5.16_exists": false,
+    "stated_late_patched_release_checked": "2026.5.18"
+  },
+  "reconciliation": {
+    "affected_fixed_pair_for_experiment": [
+      "2026.2.23",
+      "2026.2.24"
+    ],
+    "canonical_record_for_citation": "GHSA-6rcp-vxwf-3mfp / CVE-2026-32052",
+    "classification": "substantive duplicate with contradictory late version range",
+    "count_as_distinct_vulnerability": false,
+    "inference_basis": "Both records describe the same shell-wrapper approval/display versus executed argv shape mismatch; the original record names the fix and matches the native affected/fixed result, while all available May artifacts checked already contain that fix."
+  },
+  "records": [
+    {
+      "affected": "<= 2026.2.23",
+      "cve": "CVE-2026-32052",
+      "first_patched": "2026.2.24",
+      "fix_commits": [
+        "0f0a680d3df81739ea5088a2f88e65f938b7936b",
+        "55cf92578d266987e390c4bf688196af98eac748"
+      ],
+      "id": "GHSA-6rcp-vxwf-3mfp",
+      "sources": [
+        "https://github.com/openclaw/openclaw/security/advisories/GHSA-6rcp-vxwf-3mfp",
+        "https://api.github.com/advisories/GHSA-6rcp-vxwf-3mfp",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-32052"
+      ],
+      "summary": "OpenClaw's system.run shell-wrapper positional argv carriers could execute hidden commands under misleading approval text"
+    },
+    {
+      "affected": "<= 2026.5.16",
+      "contradicted_by": [
+        "https://registry.npmjs.org/openclaw/2026.5.16",
+        "openclaw-2026.5.12/20260910T073218Z/source-boundary.json",
+        "openclaw-2026.5.16-beta.7/20260910T073218Z/source-boundary.json",
+        "openclaw-2026.5.18/20260910T073218Z/source-boundary.json"
+      ],
+      "cve": null,
+      "first_patched": "2026.5.18",
+      "id": "GHSA-2j8v-hwgc-x698",
+      "sources": [
+        "https://github.com/openclaw/openclaw/security/advisories/GHSA-2j8v-hwgc-x698",
+        "https://api.github.com/advisories/GHSA-2j8v-hwgc-x698"
+      ],
+      "summary": "OpenClaw: Shell wrapper argv could change between approval and execution"
+    }
+  ]
+}

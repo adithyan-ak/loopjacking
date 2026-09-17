@@ -1,0 +1,26 @@
+{
+  "checkpoint": "ordinary function-tool per-call approval for exact A",
+  "experiment": "openai-agents-serialized-approval-control",
+  "external_effects": "none; local deterministic model and in-memory mock ledger only",
+  "finished_at": "2026-09-10T07:49:29.947454+00:00",
+  "model": "agents.testing.ScriptedModel (shipped deterministic local model)",
+  "mutation": "replace all serialized raw invocation copies with B while preserving call ID and canonical approval/invocation records",
+  "platform": "macOS-15.6-arm64-arm-64bit",
+  "python": "3.12.11 (main, Aug 18 2025, 19:02:39) [Clang 20.1.4 ]",
+  "started_at": "2026-09-10T07:49:29.898063+00:00",
+  "summary": {
+    "completed_trials": 7,
+    "direct_b_unapproved_pass": true,
+    "honest_a_pass": 3,
+    "honest_a_total": 3,
+    "interpretation": "ordinary_per_call_approval_is_action_bound",
+    "mutated_b_rejected": 3,
+    "mutated_b_total": 3,
+    "strict_negative_control_pass": true,
+    "total_trials": 7
+  },
+  "target": {
+    "package": "openai-agents",
+    "version": "0.22.2"
+  }
+}

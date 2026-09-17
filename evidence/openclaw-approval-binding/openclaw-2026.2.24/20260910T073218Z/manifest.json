@@ -1,0 +1,10 @@
+{
+  "completed_trials": 3,
+  "expected_attack": false,
+  "experiment": "openclaw-representation-binding-native",
+  "external_effects": "none; loopback gateway and temporary marker only",
+  "target": {
+    "package": "openclaw",
+    "version": "2026.2.24"
+  }
+}

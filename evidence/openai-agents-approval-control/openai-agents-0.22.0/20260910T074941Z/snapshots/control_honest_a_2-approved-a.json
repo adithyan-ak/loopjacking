@@ -1,0 +1,350 @@
+{
+  "$schemaVersion": "1.16",
+  "auto_previous_response_id": false,
+  "context": {
+    "approvals": {
+      "transfer": {
+        "approved": [
+          "call-control_honest_a_2"
+        ],
+        "rejected": []
+      }
+    },
+    "context": null,
+    "context_meta": {
+      "omitted": false,
+      "original_type": "none",
+      "requires_deserializer": false,
+      "serialized_via": "none"
+    },
+    "tool_invocations": {
+      "call-control_honest_a_2": {
+        "approval_scope": "9e348b6628e87d0132cca14cf180a95f0819498ffdb7dd157b896cf5794edf99",
+        "completed": false,
+        "executed": false,
+        "fingerprint": "c33eabcbf71981449eb5f0c73fceaa64f53a03e423201cb940113a17b2a572ab",
+        "type": "function_call"
+      }
+    },
+    "usage": {
+      "input_tokens": 0,
+      "input_tokens_details": [
+        {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        }
+      ],
+      "output_tokens": 0,
+      "output_tokens_details": [
+        {
+          "reasoning_tokens": 0
+        }
+      ],
+      "request_usage_entries": [],
+      "requests": 1,
+      "total_tokens": 0
+    }
+  },
+  "conversation_id": null,
+  "current_agent": {
+    "name": "approval-control-agent"
+  },
+  "current_step": {
+    "data": {
+      "interruptions": [
+        {
+          "agent": {
+            "name": "approval-control-agent"
+          },
+          "raw_item": {
+            "arguments": "{\"amount\":20,\"recipient\":\"alice\",\"request_id\":\"A\"}",
+            "call_id": "call-control_honest_a_2",
+            "id": "call-control_honest_a_2",
+            "name": "transfer",
+            "type": "function_call"
+          },
+          "tool_lookup_key": {
+            "kind": "bare",
+            "name": "transfer"
+          },
+          "tool_name": "transfer",
+          "tool_origin": {
+            "type": "function"
+          },
+          "type": "tool_approval_item"
+        }
+      ],
+      "llm_end_hooks_started": true,
+      "response_accepted": false
+    },
+    "type": "next_step_interruption"
+  },
+  "current_turn": 1,
+  "current_turn_persisted_item_count": 0,
+  "generated_items": [
+    {
+      "agent": {
+        "name": "approval-control-agent"
+      },
+      "description": "Record a harmless mock transfer.",
+      "raw_item": {
+        "arguments": "{\"amount\":20,\"recipient\":\"alice\",\"request_id\":\"A\"}",
+        "call_id": "call-control_honest_a_2",
+        "id": "call-control_honest_a_2",
+        "name": "transfer",
+        "type": "function_call"
+      },
+      "tool_name": "transfer",
+      "tool_origin": {
+        "type": "function"
+      },
+      "type": "tool_call_item"
+    },
+    {
+      "agent": {
+        "name": "approval-control-agent"
+      },
+      "raw_item": {
+        "arguments": "{\"amount\":20,\"recipient\":\"alice\",\"request_id\":\"A\"}",
+        "call_id": "call-control_honest_a_2",
+        "id": "call-control_honest_a_2",
+        "name": "transfer",
+        "type": "function_call"
+      },
+      "tool_lookup_key": {
+        "kind": "bare",
+        "name": "transfer"
+      },
+      "tool_name": "transfer",
+      "tool_origin": {
+        "type": "function"
+      },
+      "type": "tool_approval_item"
+    }
+  ],
+  "generated_prompt_cache_key": null,
+  "generated_session_item_indexes": [
+    0,
+    1
+  ],
+  "input_guardrail_results": [],
+  "last_model_response": {
+    "output": [
+      {
+        "arguments": "{\"amount\":20,\"recipient\":\"alice\",\"request_id\":\"A\"}",
+        "call_id": "call-control_honest_a_2",
+        "id": "call-control_honest_a_2",
+        "name": "transfer",
+        "type": "function_call"
+      }
+    ],
+    "request_id": null,
+    "response_id": "resp-789",
+    "usage": {
+      "input_tokens": 0,
+      "input_tokens_details": [
+        {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        }
+      ],
+      "output_tokens": 0,
+      "output_tokens_details": [
+        {
+          "reasoning_tokens": 0
+        }
+      ],
+      "request_usage_entries": [],
+      "requests": 1,
+      "total_tokens": 0
+    }
+  },
+  "last_processed_response": {
+    "apply_patch_actions": [],
+    "computer_actions": [],
+    "custom_tool_actions": [],
+    "functions": [
+      {
+        "tool": {
+          "description": "Record a harmless mock transfer.",
+          "lookupKey": {
+            "kind": "bare",
+            "name": "transfer"
+          },
+          "name": "transfer",
+          "paramsJsonSchema": {
+            "additionalProperties": false,
+            "properties": {
+              "amount": {
+                "title": "Amount",
+                "type": "integer"
+              },
+              "recipient": {
+                "title": "Recipient",
+                "type": "string"
+              },
+              "request_id": {
+                "title": "Request Id",
+                "type": "string"
+              }
+            },
+            "required": [
+              "amount",
+              "recipient",
+              "request_id"
+            ],
+            "title": "transfer_args",
+            "type": "object"
+          }
+        },
+        "tool_call": {
+          "arguments": "{\"amount\":20,\"recipient\":\"alice\",\"request_id\":\"A\"}",
+          "call_id": "call-control_honest_a_2",
+          "id": "call-control_honest_a_2",
+          "name": "transfer",
+          "type": "function_call"
+        }
+      }
+    ],
+    "handoffs": [],
+    "interruptions": [
+      {
+        "agent": {
+          "name": "approval-control-agent"
+        },
+        "raw_item": {
+          "arguments": "{\"amount\":20,\"recipient\":\"alice\",\"request_id\":\"A\"}",
+          "call_id": "call-control_honest_a_2",
+          "id": "call-control_honest_a_2",
+          "name": "transfer",
+          "type": "function_call"
+        },
+        "tool_lookup_key": {
+          "kind": "bare",
+          "name": "transfer"
+        },
+        "tool_name": "transfer",
+        "tool_origin": {
+          "type": "function"
+        },
+        "type": "tool_approval_item"
+      }
+    ],
+    "local_shell_actions": [],
+    "mcp_approval_requests": [],
+    "new_items": [
+      {
+        "agent": {
+          "name": "approval-control-agent"
+        },
+        "description": "Record a harmless mock transfer.",
+        "raw_item": {
+          "arguments": "{\"amount\":20,\"recipient\":\"alice\",\"request_id\":\"A\"}",
+          "call_id": "call-control_honest_a_2",
+          "id": "call-control_honest_a_2",
+          "name": "transfer",
+          "type": "function_call"
+        },
+        "tool_name": "transfer",
+        "tool_origin": {
+          "type": "function"
+        },
+        "type": "tool_call_item"
+      }
+    ],
+    "shell_actions": [],
+    "tools_used": [
+      "transfer"
+    ]
+  },
+  "max_turns": 10,
+  "model_responses": [
+    {
+      "output": [
+        {
+          "arguments": "{\"amount\":20,\"recipient\":\"alice\",\"request_id\":\"A\"}",
+          "call_id": "call-control_honest_a_2",
+          "id": "call-control_honest_a_2",
+          "name": "transfer",
+          "type": "function_call"
+        }
+      ],
+      "request_id": null,
+      "response_id": "resp-789",
+      "usage": {
+        "input_tokens": 0,
+        "input_tokens_details": [
+          {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          }
+        ],
+        "output_tokens": 0,
+        "output_tokens_details": [
+          {
+            "reasoning_tokens": 0
+          }
+        ],
+        "request_usage_entries": [],
+        "requests": 1,
+        "total_tokens": 0
+      }
+    }
+  ],
+  "nested_history_owned_session_item_refs": [],
+  "no_active_agent_run": true,
+  "original_input": "Record exact action A",
+  "output_guardrail_results": [],
+  "pending_input": [],
+  "previous_response_id": null,
+  "reasoning_item_id_policy": null,
+  "session_items": [
+    {
+      "agent": {
+        "name": "approval-control-agent"
+      },
+      "description": "Record a harmless mock transfer.",
+      "raw_item": {
+        "arguments": "{\"amount\":20,\"recipient\":\"alice\",\"request_id\":\"A\"}",
+        "call_id": "call-control_honest_a_2",
+        "id": "call-control_honest_a_2",
+        "name": "transfer",
+        "type": "function_call"
+      },
+      "tool_name": "transfer",
+      "tool_origin": {
+        "type": "function"
+      },
+      "type": "tool_call_item"
+    },
+    {
+      "agent": {
+        "name": "approval-control-agent"
+      },
+      "raw_item": {
+        "arguments": "{\"amount\":20,\"recipient\":\"alice\",\"request_id\":\"A\"}",
+        "call_id": "call-control_honest_a_2",
+        "id": "call-control_honest_a_2",
+        "name": "transfer",
+        "type": "function_call"
+      },
+      "tool_lookup_key": {
+        "kind": "bare",
+        "name": "transfer"
+      },
+      "tool_name": "transfer",
+      "tool_origin": {
+        "type": "function"
+      },
+      "type": "tool_approval_item"
+    }
+  ],
+  "tool_input_guardrail_results": [],
+  "tool_output_guardrail_results": [],
+  "tool_use_tracker": {
+    "approval-control-agent": [
+      "transfer"
+    ]
+  },
+  "trace": null
+}

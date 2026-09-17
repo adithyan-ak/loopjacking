@@ -1,0 +1,20 @@
+{
+  "claim": "The released fixed target rejected the displayed-A/complete-B mismatch before node execution while unchanged approved A still executed.",
+  "contradicting_evidence": [],
+  "limitations": [
+    "Loopback transport and a harmless temporary marker were used.",
+    "The distinct approval-role client was scripted after asserting the exact product event; human factors and GUI comprehension were not measured.",
+    "This experiment establishes only the pinned released target and the tested shell-wrapper argv path."
+  ],
+  "next_falsifying_experiment": "Rerun the same oracle on any disputed boundary or later release.",
+  "oracle": {
+    "direct_b_denied": true,
+    "expected_attack": false,
+    "trials": 3,
+    "unchanged_a_executes": true
+  },
+  "reproduction_command": "bash experiments/openclaw-approval-binding/capture_version.sh <pinned-openclaw-worktree> 0 <output-dir>",
+  "result": "fixed_rejection",
+  "target": "openclaw@2026.2.24",
+  "verified_at": "2026-09-10T07:42:01Z"
+}

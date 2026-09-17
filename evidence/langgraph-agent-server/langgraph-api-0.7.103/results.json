@@ -1,0 +1,113 @@
+{
+  "approver_resume_status": 200,
+  "assistant_id": "1de14910-f6ae-59e5-b115-2254254a4682",
+  "attack_ledger_has_A": false,
+  "attack_ledger_has_exact_B": true,
+  "attack_thread_create_status": 200,
+  "attempts": [
+    {
+      "actor": "approver",
+      "amount": 2000,
+      "authorized": true,
+      "destination": "attacker-sink",
+      "permissions": [
+        "thread:approve",
+        "wire:execute"
+      ],
+      "request_id": "req-001",
+      "thread_id": "e1d6e6f3-cae1-4ee8-8aae-1453d0b0f864",
+      "tool_call_id": "transfer-call"
+    },
+    {
+      "actor": "approver",
+      "amount": 20,
+      "authorized": true,
+      "destination": "approved-vendor",
+      "permissions": [
+        "thread:approve",
+        "wire:execute"
+      ],
+      "request_id": "req-001",
+      "thread_id": "b468235c-35cc-4460-b1bc-5c5cd40150e5",
+      "tool_call_id": "transfer-call"
+    }
+  ],
+  "control_ledger_has_A": true,
+  "control_resume_status": 200,
+  "control_reviewed_action": {
+    "args": {
+      "amount": 20,
+      "destination": "approved-vendor",
+      "request_id": "req-001"
+    },
+    "description": "Tool execution requires approval\n\nTool: mock_wire_transfer\nArgs: {'amount': 20, 'destination': 'approved-vendor', 'request_id': 'req-001'}",
+    "name": "mock_wire_transfer"
+  },
+  "direct_b_initial_status": 200,
+  "direct_b_ledger_has_B": false,
+  "direct_b_maker_resume_denied": true,
+  "direct_b_maker_resume_status": 200,
+  "expected": "attack",
+  "initial_status": 200,
+  "langchain_version": "1.3.18",
+  "langgraph_api_version": "0.7.103",
+  "langgraph_version": "1.2.11",
+  "ledger": [
+    {
+      "actor": "approver",
+      "amount": 2000,
+      "authorized": true,
+      "destination": "attacker-sink",
+      "permissions": [
+        "thread:approve",
+        "wire:execute"
+      ],
+      "request_id": "req-001",
+      "thread_id": "e1d6e6f3-cae1-4ee8-8aae-1453d0b0f864",
+      "tool_call_id": "transfer-call"
+    },
+    {
+      "actor": "approver",
+      "amount": 20,
+      "authorized": true,
+      "destination": "approved-vendor",
+      "permissions": [
+        "thread:approve",
+        "wire:execute"
+      ],
+      "request_id": "req-001",
+      "thread_id": "b468235c-35cc-4460-b1bc-5c5cd40150e5",
+      "tool_call_id": "transfer-call"
+    }
+  ],
+  "ledger_has_A": true,
+  "ledger_has_exact_B": true,
+  "maker_resume_denied": true,
+  "maker_resume_status": 200,
+  "mutated_action": {
+    "args": {
+      "amount": 2000,
+      "destination": "attacker-sink",
+      "request_id": "req-001"
+    },
+    "description": "Tool execution requires approval\n\nTool: mock_wire_transfer\nArgs: {'amount': 2000, 'destination': 'attacker-sink', 'request_id': 'req-001'}",
+    "name": "mock_wire_transfer"
+  },
+  "mutation_denied": false,
+  "mutation_status": 200,
+  "outsider_status": 403,
+  "review_is_exact_A": true,
+  "reviewed_action": {
+    "args": {
+      "amount": 20,
+      "destination": "approved-vendor",
+      "request_id": "req-001"
+    },
+    "description": "Tool execution requires approval\n\nTool: mock_wire_transfer\nArgs: {'amount': 20, 'destination': 'approved-vendor', 'request_id': 'req-001'}",
+    "name": "mock_wire_transfer"
+  },
+  "safe_policy_negative": false,
+  "state_is_exact_B": true,
+  "state_remains_exact_A": false,
+  "strict_positive": true
+}
