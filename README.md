@@ -1,7 +1,7 @@
 # Loopjacking evidence archive
 
 This repository contains the public evidence and reproduction harnesses for
-*Loopjacking: Hijacking Human-in-the-Loop Approval*.
+[*Loopjacking: Hijacking Human-in-the-Loop Approval*](https://arxiv.org/abs/2609.21081).
 
 Loopjacking is an implementation-level failure in which a human approves the
 operation or representation they understand as A, but product-owned logic uses
@@ -66,6 +66,5 @@ The evidence cutoff is September 10, 2026.
 
 ## Citation
 
-Until the paper has a final archival identifier, cite the paper title and this
-repository URL. A formal citation record can be added once the preprint identifier
-is assigned.
+Adithyan Arun Kumar. *Loopjacking: Hijacking Human-in-the-Loop Approval*.
+[arXiv:2609.21081](https://arxiv.org/abs/2609.21081), 2026.

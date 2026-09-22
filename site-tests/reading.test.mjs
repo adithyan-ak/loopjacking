@@ -10,9 +10,10 @@ const app = readFileSync(new URL('../site/app.js', import.meta.url), 'utf8');
 const figure = readFileSync(new URL('../site/loopjacking-explained.svg', import.meta.url), 'utf8');
 
 // Front-page metadata was checked visually and with pdfinfo on 2026-09-18.
-// This pin requires a fresh citation review if the downloadable paper is replaced;
-// it does not parse the PDF or establish its scientific correctness.
+// This pin preserves the retained local PDF; the website links to arXiv instead.
+// It does not parse the PDF or establish its scientific correctness.
 const reviewedPaperSha256 = '5cb2724dffa8e577518716025d04466b9e39f5a75a6285b69a2f8e0467aab7f7';
+const paperUrl = 'https://arxiv.org/abs/2609.21081';
 
 // These checks inspect this page's source, not a browser DOM or computed styles.
 // They do not certify printed layout, accessibility, font loading, or no-JS rendering.
@@ -89,7 +90,7 @@ test('the opening identifies the research context and retains the fictional-exam
   assert.match(textOf(hero), /attacker cannot authorize the transfer/i);
 });
 
-test('the visible research citation accompanies the reviewed paper', () => {
+test('the visible research citation identifies the arXiv paper', () => {
   const citation = pageElements.find(element => element.attrs.get('id') === 'paper-citation');
   assert.ok(citation);
   assert.equal(hiddenInMarkup(citation), false);
@@ -103,11 +104,30 @@ test('the visible research citation accompanies the reviewed paper', () => {
   assert.equal(date?.attrs.get('datetime'), '2026-09');
   assert.equal(textOf(date), 'September 2026');
   const link = pageElements.find(element => hasClass(element, 'read-paper'));
-  assert.equal(link?.attrs.get('href'), './loopjacking-paper.pdf');
+  assert.equal(link?.attrs.get('href'), paperUrl);
   assert.equal(link?.attrs.get('aria-describedby'), citation.attrs.get('id'));
+  const identifier = pageElements.find(element => element.tag === 'a'
+    && hasAncestor(element, ancestor => ancestor === citation));
+  assert.equal(identifier?.attrs.get('href'), paperUrl);
+  assert.equal(textOf(identifier), 'arXiv:2609.21081');
+});
+
+test('all paper buttons and the citation link use the canonical arXiv abstract page', () => {
+  const links = pageElements.filter(element => element.tag === 'a'
+    && /paper|arxiv/i.test(textOf(element)));
+  assert.equal(links.length, 4, 'Expected three paper buttons and one citation link');
+  for (const link of links) {
+    assert.equal(link.attrs.get('href'), paperUrl);
+    assert.equal(link.attrs.has('download'), false, 'The abstract page is not a download');
+    assert.notEqual(link.attrs.get('type'), 'application/pdf', 'The abstract page is not a PDF');
+  }
+  assert.doesNotMatch(html, /(?:href|src)=["'][^"']*loopjacking-paper\.pdf["']/i);
+});
+
+test('the retained local PDF remains unchanged', () => {
   const pdf = readFileSync(new URL('../site/loopjacking-paper.pdf', import.meta.url));
   assert.equal(createHash('sha256').update(pdf).digest('hex'), reviewedPaperSha256,
-    'Paper changed: inspect its title page and review the displayed citation before updating this pin');
+    'The retained PDF changed: review the replacement before updating this pin');
 });
 
 test('both mechanism explanations exist in ordinary, initially unhidden HTML', () => {

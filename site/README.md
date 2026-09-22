@@ -34,11 +34,12 @@ short recap remain readable. JavaScript adds the comparison controls and quiz.
 Print styles include both mechanisms and the reading walkthrough. Paginated print
 output still needs review on the browser and paper size used for distribution.
 
-The evidence section identifies the linked paper by its title, author, and stated
-month. The reading tests pin the PDF bytes paired with that inspected citation.
-Before replacing `loopjacking-paper.pdf`, review its title page and the displayed
-citation, then update the test pin. This checks file identity, not scientific
-correctness or publication status.
+All paper buttons and the evidence citation link to
+[arXiv:2609.21081](https://arxiv.org/abs/2609.21081). The citation identifies the
+paper's title, author, month, and arXiv identifier. The reading tests check these
+links and retain a checksum for the unchanged local `loopjacking-paper.pdf`, which
+is no longer linked from the page. These tests check source references and file
+identity, not scientific correctness or the availability of arXiv.
 
 `loopjacking-explained.svg` is a self-contained downloadable figure;
 `loopjacking-explained.png` is its 1200×630 raster export. Their fictional-amount
