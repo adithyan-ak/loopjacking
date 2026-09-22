@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="figure-title figure-description">
+  <title id="figure-title">Loopjacking: a real approval used for a different action</title>
+  <desc id="figure-description">A human approves a $20 refund to a customer. The product uses that approval to release a $20,000 transfer to an attacker, who cannot approve or send this transfer directly. The amounts are a fictional illustration, not actual losses.</desc>
+  <defs>
+    <radialGradient id="glow" cx="85%" cy="0%" r="85%">
+      <stop offset="0" stop-color="#ffad24" stop-opacity=".07"/>
+      <stop offset="1" stop-color="#ffad24" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#08090c"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="64" y="66" fill="#ffad24" font-family="monospace" font-size="24" letter-spacing="1">HUMAN APPROVAL · ATTACK EXPLAINED</text>
+    <text x="62" y="154" fill="#e9e6df" font-size="78" font-weight="700" letter-spacing="-3">Loop<tspan fill="#ffad24">jacking</tspan></text>
+    <text x="65" y="200" fill="#acb0bb" font-size="32">A real approval. A different action.</text>
+    <rect x="64" y="236" width="430" height="204" rx="14" fill="#0c0e13" stroke="#2c6851"/>
+    <text x="91" y="278" fill="#acb0bb" font-family="monospace" font-size="24">HUMAN APPROVES</text>
+    <text x="90" y="359" fill="#36d399" font-size="80" font-weight="700" letter-spacing="-3">$20</text>
+    <text x="92" y="409" fill="#e9e6df" font-size="30">Refund to the customer</text>
+    <path d="M520 365 H657 M646 355 L657 365 L646 375" fill="none" stroke="#ffad24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="590" y="300" text-anchor="middle" fill="#ffad24" font-family="monospace" font-size="26">SAME</text>
+    <text x="590" y="333" text-anchor="middle" fill="#ffad24" font-family="monospace" font-size="26">APPROVAL</text>
+    <rect x="686" y="236" width="450" height="204" rx="14" fill="#0c0e13" stroke="#834047"/>
+    <text x="713" y="278" fill="#acb0bb" font-family="monospace" font-size="24">PRODUCT RELEASES</text>
+    <text x="712" y="359" fill="#ff4d55" font-size="80" font-weight="700" letter-spacing="-3">$20,000</text>
+    <text x="714" y="409" fill="#e9e6df" font-size="30">Transfer to the attacker</text>
+    <text x="64" y="490" fill="#e9e6df" font-size="32">The attacker cannot approve or send this transfer directly.</text>
+    <text x="64" y="531" fill="#acb0bb" font-size="30">The product wrongly lets it inherit the refund approval.</text>
+    <path d="M64 552 H1136" stroke="#30343e"/>
+    <text x="64" y="593" fill="#acb0bb" font-size="30">Fictional amounts. Not actual losses.</text>
+  </g>
+</svg>

@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08090c">
+  <meta name="description" content="Loopjacking in AI-agent workflows: a fictional $20-to-$20,000 example explains approval hijacking, both attack paths, defenses, and research limits.">
+  <title>Loopjacking · The attack, visually explained</title>
+  <link rel="canonical" href="https://loopjacking.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Loopjacking">
+  <meta property="og:title" content="Loopjacking · The attack, visually explained">
+  <meta property="og:description" content="A fictional $20-to-$20,000 example explains human-approval hijacking, both attack paths, and defenses.">
+  <meta property="og:url" content="https://loopjacking.com/">
+  <meta property="og:image" content="https://loopjacking.com/loopjacking-explained.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="A fictional $20 refund approval is used for a $20,000 transfer the attacker cannot authorize directly.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Loopjacking · The attack, visually explained">
+  <meta name="twitter:description" content="A fictional $20-to-$20,000 example explains human-approval hijacking, both attack paths, and defenses.">
+  <meta name="twitter:image" content="https://loopjacking.com/loopjacking-explained.png">
+  <meta name="twitter:image:alt" content="A fictional $20 refund approval is used for a $20,000 transfer the attacker cannot authorize directly.">
+  <link rel="stylesheet" href="./fonts/fonts.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2308090c'/%3E%3Cpath d='M15 18h27a9 9 0 0 1 0 18H25' fill='none' stroke='%23ffad24' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='m29 28-10 8 10 9' fill='none' stroke='%23ff4d55' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#s0">Skip to briefing</a>
+  <div id="scroll-rail" aria-hidden="true"><div id="scroll-bar"></div></div>
+
+  <div class="grid-nav">
+    <div class="sidebar">
+    <button class="toc-toggle" type="button" aria-expanded="false" aria-controls="section-menu" hidden><span>Sections</span><span data-current-section>00 · The attack</span><span aria-hidden="true">＋</span></button>
+    <nav class="toc" id="section-menu" aria-label="Dossier sections">
+      <a class="brand" href="#top">LOOPJACKING · THREAT DOSSIER<small>HIJACKING HUMAN APPROVAL</small></a>
+      <a href="#s0" data-section><span>00</span> The attack in 10 seconds</a>
+      <a href="#s1" data-section><span>01</span> Meet A, approval, and B</a>
+      <a href="#s2" data-section><span>02</span> Where trust breaks</a>
+      <a href="#s3" data-section><span>03</span> Two ways in</a>
+      <a href="#s4" data-section><span>04</span> When it counts</a>
+      <a href="#s5" data-section><span>05</span> Run the attack ▶</a>
+      <a href="#s6" data-section><span>06</span> What does not count</a>
+      <a href="#s7" data-section><span>07</span> Grounded in evidence</a>
+      <a href="#s8" data-section><span>08</span> What remains unknown</a>
+      <a href="#s9" data-section><span>09</span> Stop the attack</a>
+      <a href="#s10" data-section><span>10</span> Check your mental model</a>
+      <a class="paper-link" href="./loopjacking-paper.pdf">READ THE PAPER ↗</a>
+    </nav>
+    </div>
+
+    <main>
+      <header class="hero" id="s0">
+        <div class="classif">
+          <span class="dot" aria-hidden="true"></span>
+          <span class="pill red">AI AGENT SECURITY</span>
+        </div>
+        <h1 aria-label="Loopjacking"><strong>Loop</strong><em>jacking</em></h1>
+        <p class="sub">You approve a <b class="safe-text">$20 refund</b>. The system later treats that approval as permission to release a <b class="danger-text">$20,000 transfer</b>. Your approval was real. It was attached to the wrong action.</p>
+
+        <div class="big-trace" aria-label="The human approves a 20 dollar refund, but the product releases a 20,000 dollar transfer">
+          <div><small>YOU APPROVED</small><strong class="safe money">$20</strong><p>Refund to the customer</p></div>
+          <i aria-hidden="true">→</i>
+          <div><small>THE PRODUCT RELEASED</small><strong class="danger money">$20,000</strong><p>Transfer to the attacker</p></div>
+        </div>
+        <p class="scenario-note">Illustrative payment scenario. These amounts are not a claim of actual losses.</p>
+        <p class="hero-boundary">The attacker cannot authorize the transfer. The product lets it inherit your approval.</p>
+        <div class="hero-actions">
+          <a class="walkthrough-link" href="#s5">See how it happens <span aria-hidden="true">↓</span></a>
+          <a href="#s1">Start with the basics <span aria-hidden="true">→</span></a>
+        </div>
+      </header>
+
+      <section id="s1">
+        <div class="kicker"><span>01</span> Meet A, approval, and B</div>
+        <h2>Name the four moving parts.</h2>
+        <p class="lead">Keep the $20 refund in mind. The technical model is just a precise way to describe that story.</p>
+        <div class="gloss">
+          <details open><summary><code>A</code><span>the $20 refund the human sees and approves</span><b>+</b></summary><p>A is the complete approved operation: refund $20, to the intended customer, for the intended order.</p></details>
+          <details open><summary><code>D<sub>A</sub></code><span>the human's recorded “yes” to that refund</span><b>+</b></summary><p>The product may store this decision as a token, state change, signature, or approval-role action. Its authority should belong to A only.</p></details>
+          <details open><summary><code>B</code><span>the $20,000 transfer that inherits the approval</span><b>+</b></summary><p>B changes something authorization-relevant: the amount, action, recipient, resource, or scope. A cosmetic difference is not enough.</p></details>
+          <details open><summary><code>binding</code><span>the link between approval and the action it authorizes</span><b>+</b></summary><p>A safe product checks that the complete action it releases matches what the human reviewed and approved. A material mismatch breaks that link, whether hidden before approval or introduced afterward.</p></details>
+        </div>
+      </section>
+
+      <section id="s2">
+        <div class="kicker"><span>02</span> Where trust breaks</div>
+        <h2>The human checks one thing. The product uses another.</h2>
+        <p class="lead">The approval screen answers “May we refund $20?” The execution path later acts as if the human answered “May we transfer $20,000?”</p>
+
+        <div class="analogy">
+          <span>THE STORY</span>
+          <h3>You click <b class="safe-text">Approve $20 refund.</b></h3>
+          <p>The product records a real approval. Before that approval is consumed, the operative request either already hides or later becomes <b class="danger-text">Transfer $20,000 to an attacker-controlled account.</b> If the product reuses the old “yes,” the approval has been loopjacked.</p>
+        </div>
+
+        <div class="timeline">
+          <span class="timeline-title">ONE ROUTE: THE REQUEST CHANGES AFTER APPROVAL</span>
+          <div class="track">
+            <div class="node check"><b>CHECK</b><span>human reviews $20 refund</span><i></i><small>approval D<sub>A</sub> ✓</small></div>
+            <div class="node gap"><b>HIJACK</b><span>request means $20,000 transfer</span><i></i><small>the old “yes” remains</small></div>
+            <div class="node use"><b>USE</b><span>product releases the transfer</span><i></i><small>no exact re-check ✕</small></div>
+          </div>
+          <p>The approval button is only the check. Security depends on whether the product proves, at the moment of use, that the action is still the one the human approved.</p>
+        </div>
+      </section>
+
+      <section id="s3">
+        <div class="kicker"><span>03</span> Two ways in</div>
+        <h2>The request can lie before or change after approval.</h2>
+        <p class="lead">Both routes end at the same failure: the human's decision for the $20 refund authorizes the $20,000 transfer.</p>
+
+        <div class="path-switch" hidden role="group" aria-label="Compare Loopjacking paths">
+          <button class="selected" type="button" aria-pressed="true" aria-controls="path-panel" data-path="representation"><span>I</span> Hidden before approval<small>Representation mismatch</small></button>
+          <button type="button" aria-pressed="false" aria-controls="path-panel-substitution" data-path="substitution"><span>II</span> Changed after approval<small>Post-approval substitution</small></button>
+        </div>
+
+        <div class="path-stage" id="path-panel" data-path-panel="representation" role="region" aria-label="Representation mismatch">
+          <div class="path-flow representation-flow">
+            <div class="request-object">
+              <small>COMPLETE REQUEST</small>
+              <p><span>approval describes</span><b>refund $20</b></p>
+              <p class="red"><span>execution performs</span><b>transfer $20,000</b></p>
+            </div>
+            <i aria-hidden="true">→</i>
+            <div class="approval-view"><small>APPROVAL VIEW</small><strong>$20</strong><p>Refund to customer</p><span>APPROVED</span></div>
+            <i aria-hidden="true">→</i>
+            <div class="effect-view"><small>EXECUTION USES</small><strong>$20K</strong><p>Transfer to attacker</p></div>
+          </div>
+          <div class="path-info"><span>REPRESENTATION-BASED</span><h3>The dangerous action is already there.</h3><p>The complete request encodes the $20,000 transfer before approval, but the product shows the human only the $20 refund. Execution later consumes the parts the approval view left out.</p></div>
+        </div>
+        <div class="path-stage" id="path-panel-substitution" data-path-panel="substitution" role="region" aria-label="Post-approval substitution">
+    <div class="path-flow substitution-flow">
+      <div class="approval-view"><small>REVIEWED STATE</small><strong>$20</strong><p>Refund to customer</p><span>APPROVED</span></div>
+      <i aria-hidden="true">→</i>
+      <div class="request-object">
+        <small>ATTACKER-REACHABLE UPDATE</small>
+        <p><span>same workflow</span><b>decision D<sub>A</sub> remains</b></p>
+        <p class="red"><span>amount</span><b>$20 → $20,000</b></p>
+        <p class="red"><span>recipient</span><b>customer → attacker</b></p>
+      </div>
+      <i aria-hidden="true">→</i>
+      <div class="effect-view"><small>EXECUTION USES</small><strong>$20K</strong><p>Transfer to attacker</p></div>
+    </div>
+    <div class="path-info"><span>POST-APPROVAL STATE SUBSTITUTION</span><h3>The safe action changes after the click.</h3><p>The human approves the exact $20 refund. Before that decision is consumed, attacker-reachable workflow state changes the amount, recipient, or operation. Product logic releases the $20,000 transfer under the approval for the refund.</p></div>
+        </div>
+      </section>
+
+      <section id="s4">
+        <div class="kicker"><span>04</span> When it counts</div>
+        <h2>Six facts turn a bad workflow into Loopjacking.</h2>
+        <p class="lead">A confusing screen or mutable task is not enough. You need the complete path from the human's real approval to the attacker's different effect.</p>
+        <div class="clauses">
+          <article><span>01</span><div><h3>A human genuinely approves the $20 refund.</h3><p>The click or approval-role decision is real. It is not forged or skipped.</p></div></article>
+          <article><span>02</span><div><h3>The released action is materially different.</h3><p>Changing $20 into $20,000, the recipient, or the operation itself changes what was authorized.</p></div></article>
+          <article><span>03</span><div><h3>An attacker can reach the mismatch.</h3><p>The hidden field, update, replay, or scope drift must be reachable through a real product path.</p></div></article>
+          <article><span>04</span><div><h3>The product consumes the wrong approval.</h3><p>Product-owned logic treats the human's “yes” to A as authority for B.</p></div></article>
+          <article><span>05</span><div><h3>B reaches a consequential effect.</h3><p>The $20,000 action reaches execution. A harmless test may record it instead of sending money.</p></div></article>
+          <article><span>06</span><div><h3>The attacker could not simply do B.</h3><p>The stolen approval crosses an authority boundary the attacker could not cross directly.</p></div></article>
+          <article class="combine"><p>Together, these six facts establish an <strong>approval-hijacking path.</strong></p></article>
+        </div>
+      </section>
+
+      <section id="s5">
+        <div class="kicker"><span>05</span> Run the attack</div>
+        <h2>Watch a $20 approval become $20,000.</h2>
+        <p class="lead">Follow a post-approval substitution. The attacker can change a pending request but cannot approve or directly execute the larger transfer.</p>
+
+        <div class="sim" data-simulator hidden>
+          <div class="sim-bar">
+            <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="sim-title">ILLUSTRATIVE PAYMENT WORKFLOW</span>
+          </div>
+          <div class="sim-progress" role="group" aria-label="Walkthrough steps">
+            <button class="on" type="button" data-sim-step="0"><b>00</b>IDLE</button>
+            <button type="button" data-sim-step="1"><b>01</b>PROPOSE</button>
+            <button type="button" data-sim-step="2"><b>02</b>APPROVE</button>
+            <button type="button" data-sim-step="3"><b>03</b>CHANGE</button>
+            <button type="button" data-sim-step="4"><b>04</b>USE</button>
+          </div>
+          <div class="sim-controls">
+            <button type="button" data-sim-prev disabled>← Back</button>
+            <button class="primary" type="button" data-sim-next>Start →</button>
+            <button type="button" data-sim-auto aria-pressed="false">▶ Play</button>
+            <button type="button" data-sim-reset>Reset</button>
+          </div>
+          <div class="sim-stage" id="walkthrough-stage">
+            <div class="sim-copy">
+              <span data-sim-index>STEP 00 / 04</span>
+              <p class="sim-mode" data-sim-mode hidden></p>
+              <h3 data-sim-title>Ready.</h3>
+              <p data-sim-copy>Follow the approval from a small refund to a different payment. Nothing here sends money or contacts a product.</p>
+            </div>
+            <div class="comparison" aria-label="Approved action compared with current action">
+              <article class="action-card approved-card">
+                <h4>HUMAN APPROVED <span data-approved-state>NOT YET</span></h4>
+                <dl><div><dt>Action</dt><dd data-approved-action>—</dd></div><div><dt>Amount</dt><dd data-approved-amount>—</dd></div><div><dt>Recipient</dt><dd data-approved-recipient>—</dd></div></dl>
+              </article>
+              <article class="action-card current-card" data-current-card>
+                <h4>CURRENT REQUEST <span data-current-state>NOT YET</span></h4>
+                <dl><div><dt>Action</dt><dd data-current-action>—</dd></div><div><dt>Amount</dt><dd data-current-amount>—</dd></div><div><dt>Recipient</dt><dd data-current-recipient>—</dd></div></dl>
+              </article>
+            </div>
+            <p class="decision-record"><span>RECORDED DECISION</span><strong data-decision>No approval yet.</strong></p>
+            <p class="sim-verdict" data-sim-verdict>No action is authorized yet.</p>
+          </div>
+          <div class="sim-experiment" data-sim-experiment hidden>
+            <h3>Would an exact check stop it?</h3>
+            <p>Keep the same approval. Change one condition and compare the outcome.</p>
+            <label><input type="checkbox" data-binding> Compare the current action with the approved action at use time</label>
+            <label><input type="checkbox" data-unchanged> Leave the original $20 refund unchanged</label>
+            <p class="sim-verdict" data-experiment-result></p>
+            <p class="experiment-note">This comparison assumes the approval view described the complete action. A misleading view must be fixed too.</p>
+          </div>
+          <p class="sr-only" data-sim-announcement role="status" aria-live="polite" aria-atomic="true"></p>
+        </div>
+        <div class="reading-fallback">
+          <h3>One approval, two different actions.</h3>
+          <ol>
+            <li>The requester is the attacker in this fictional example. They can propose and update a payment, but cannot approve or directly execute it. They propose a $20 refund to a customer.</li>
+            <li>A human reviews that exact refund and approves it.</li>
+            <li>The attacker changes the pending request to a $20,000 transfer to their own account. The original approval remains.</li>
+            <li>The product checks only that an approval exists and lets the different transfer proceed.</li>
+          </ol>
+          <p><strong>The defense:</strong> compare the complete current action with the approved action at use time. Reject the changed transfer or seek a new approval. The unchanged $20 refund can still proceed with a matching, still-valid approval.</p>
+        </div>
+        <p class="scenario-note simulator-note">The amounts are fictional. The demo assumes a still-valid, unused approval in the correct workflow. The research uses safe, harmless sinks.</p>
+      </section>
+
+      <section id="s6">
+        <div class="kicker"><span>06</span> What does not count</div>
+        <h2>Not every bad approval flow is Loopjacking.</h2>
+        <p class="lead">The defining question is simple: did a genuine approval for the $20 refund authorize the different $20,000 action?</p>
+        <div class="cards c2">
+          <article><span>≠</span><h3>Prompt injection by itself</h3><p>The agent behaves badly, but no human approval for one action authorizes another.</p></article>
+          <article><span>≠</span><h3>A skipped or fake approval</h3><p>The product executes without a genuine human “yes” to the $20 refund.</p></article>
+          <article><span>≠</span><h3>A task that merely changes</h3><p>Mutable state matters only when the old approval crosses into the changed effect.</p></article>
+          <article><span>≠</span><h3>The human knowingly approves $20,000</h3><p>A bad decision is not Loopjacking when the person clearly sees and approves B.</p></article>
+        </div>
+        <div class="callout"><b>A2A is a possible carrier, not the definition.</b> Its continuation mechanics do not establish an authorization vulnerability on their own.</div>
+      </section>
+
+      <section id="s7">
+        <div class="kicker"><span>07</span> Grounded in evidence</div>
+        <h2>The simple story maps to tested product behavior.</h2>
+        <p class="lead">The amounts are illustrative. The mechanism is not. The research follows released product paths, records what the human approval covered, and checks what the product finally released.</p>
+        <div class="evidence-list">
+          <article><span>01</span><div><h3>Post-approval substitution</h3><p>Released products reproduced the same shape: exact A was approved, then attacker-reachable state supplied B.</p></div><b>TESTED IN PRODUCT</b></article>
+          <article><span>02</span><div><h3>Representation mismatch</h3><p>A released product showed the approver A while its complete pre-existing request produced B.</p></div><b>TESTED IN PRODUCT</b></article>
+          <article><span>03</span><div><h3>Action-bound continuation</h3><p>A comparison system kept approval bound to A and rejected changed B after the workflow resumed. Continuation alone was not enough.</p></div><b>NEGATIVE CONTROL</b></article>
+          <article><span>04</span><div><h3>Safe paths</h3><p>Exact comparison or denying attacker-reachable mutation blocked B while still allowing unchanged A. These controls include a released fix, a supported safe configuration, and a researcher-added check—not released fixes for every case.</p></div><b>TESTED CONTROLS</b></article>
+        </div>
+        <p class="paper-citation" id="paper-citation"><cite>Loopjacking: Hijacking Human-in-the-Loop Approval</cite><span>Adithyan Arun Kumar · <time datetime="2026-09">September 2026</time></span></p>
+        <a class="read-paper" href="./loopjacking-paper.pdf" type="application/pdf" aria-describedby="paper-citation">READ THE FULL PAPER <span aria-hidden="true">↗</span></a>
+      </section>
+
+      <section id="s8">
+        <div class="kicker"><span>08</span> What remains unknown</div>
+        <h2>The attack class is real. These broader claims are not established.</h2>
+        <div class="limits-grid">
+          <article><span>NOT ESTABLISHED</span><h3>Ecosystem prevalence</h3><p>The study does not measure how common Loopjacking is across agent products.</p></article>
+          <article><span>NOT ESTABLISHED</span><h3>One shared framework defect</h3><p>Different cases have different mechanisms, boundaries, and fixes.</p></article>
+          <article><span>NOT ESTABLISHED</span><h3>A universal affected range</h3><p>Product findings apply only to the tested versions and configurations.</p></article>
+          <article><span>NOT ESTABLISHED</span><h3>A universal severity score</h3><p>Impact and exploitability are product-specific.</p></article>
+        </div>
+      </section>
+
+      <section id="s9">
+        <div class="kicker"><span>09</span> Stop the attack</div>
+        <h2>A “yes” is not enough. Ask what it was a yes to.</h2>
+        <p class="lead">Record the complete $20 refund the human approved. When the decision is used, rebuild the current action and compare every authorization-relevant field.</p>
+        <div class="before-after">
+          <article class="before"><h3>✕ BROKEN BINDING</h3><ul><li>Show “Refund $20” but omit important fields.</li><li>Store only a broad <code>approved = true</code>.</li><li>Read the current action later.</li><li>Let the old approval release $20,000.</li></ul></article>
+          <article class="after"><h3>✓ EXACT BINDING</h3><ul><li>Show the complete, canonical $20 refund.</li><li>Bind the decision to action, amount, recipient, resource, principal, scope, freshness, and consumption.</li><li>Rebuild the action at use time.</li><li>Release A only with a matching, still-valid approval. Reject or re-authorize B.</li></ul></article>
+        </div>
+        <div class="portable-rule"><span>THE PORTABLE RULE</span><p>The complete action shown to the human, approved, and released must agree.</p></div>
+      </section>
+
+      <section id="s10">
+        <div class="kicker"><span>10</span> Check your mental model</div>
+        <h2>Can you spot the stolen authority?</h2>
+        <div class="quiz" data-quiz></div>
+        <div class="quiz-done" data-quiz-done></div>
+        <div class="quiz-fallback">
+          <p>To recognize Loopjacking, identify what the human approved, what the product released, and how an attacker made that approval authorize the different action.</p>
+          <p>If there was no genuine human approval, or the person knowingly approved the released action, this is a different failure. A changing task alone is not enough.</p>
+        </div>
+      </section>
+
+      <footer id="explain-it">
+        <h3>Explain it accurately.</h3>
+        <p class="definition" id="definition">Loopjacking occurs when an attacker causes a system to use a human’s approval for one action to authorize or release a materially different action the person did not approve.</p>
+        <p id="definition-boundary">The attacker must lack equivalent direct authority for that action. Reusing the human’s approval is what crosses the boundary.</p>
+        <p><a class="inline-link" href="#s3">Hidden before approval or changed afterward</a> · The same approval mismatch, through different routes.</p>
+        <div class="reuse-actions">
+          <button type="button" data-copy-definition hidden>Copy definition</button>
+          <a href="./loopjacking-explained.png" download>Download figure <span class="format-label">PNG</span></a>
+          <a href="./loopjacking-explained.svg" download>Download figure <span class="format-label">SVG</span></a>
+          <a href="./loopjacking-paper.pdf">Read the paper ↗</a>
+        </div>
+        <p class="copy-status" data-copy-status role="status" aria-live="polite"></p>
+        <p class="footer-note">The figure uses fictional amounts. Product results are configuration- and version-specific; see the paper for methods and limitations.</p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
